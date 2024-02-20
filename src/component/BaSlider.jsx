@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import causolBg from "../assets/img/herobg.png";
 import { CustomPrevArrow, CustomNextArrow } from "./Button";
+import BabotttomSection from "./BabotttomSection";
 
 // carusol impoartment ends
 
@@ -32,7 +33,7 @@ const BaSlider = () => {
   };
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -48,8 +49,8 @@ const BaSlider = () => {
   //   carusol coding ends
 
   return (
-    <div className="relative">
-      <div className="slider-container">
+    <div className="relative ">
+      <div className="slider-container h-[732px] w-[1441px]" >
         <Slider
           ref={(slider) => {
             sliderRef = slider;
@@ -86,6 +87,7 @@ const BaSlider = () => {
         next={next}
         previous={previous}
         />
+        <BabotttomSection/>
       </div>
     </div>
   );

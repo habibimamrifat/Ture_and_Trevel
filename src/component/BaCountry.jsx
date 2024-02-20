@@ -2,7 +2,7 @@ import React from "react";
 
 const BaCountry = () => {
   return (
-    <div className="text-white flex justify-between items-center mt-[124px] ">
+    <div className="text-white flex justify-between items-center mt-[50px] ">
       <div className="ml-[110px]">
             <div className="w-[312px] h-[113px] relative ">
 
@@ -13,7 +13,7 @@ const BaCountry = () => {
 
                 <h1 className="font-normal text-8xl">Arizona</h1>
             </div>
-            <p className="font-normal text-base w-[313px]  h-[47px]">
+            <p className="font-normal text-base w-[313px]  h-[38px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
             </p>

@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 
+.slider-dots {
+    display: none;
+}
+
+/* .slick-slider .slick-slide{
+   
+} */

@@ -6,7 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const BaBookNOw = ({next, previous}) => {
   
   return (
-    <div className="mt-[37px] flex justify-between items-center  pb-[136px]">
+    <div className="mt-[37px] flex justify-between items-center ">
       <div className="text-xl font-bold ml-[106px] text-white gap-2">
         <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md">
           Book Now
@@ -16,7 +16,7 @@ const BaBookNOw = ({next, previous}) => {
 
       <div className="flex justify-center items-center gap-6 mr-[126px]">
 
-        <button onClick={previous} className="bg-black">
+        <button onClick={previous}>
         <div
           className="w-[42px] h-[41px] rounded-full bg-white/20 flex justify-center items-center text-white "
           
@@ -25,7 +25,7 @@ const BaBookNOw = ({next, previous}) => {
         </div>
         </button>
 
-        <button onClick={next} className="bg-black">
+        <button onClick={next} >
         <div
           className="w-[42px] h-[41px] rounded-full bg-white/20 flex justify-center items-center text-white "
         >

@@ -3,7 +3,37 @@ import flag1 from "../assets/img/Ellipse 30.png";
 import { FaAngleDown } from "react-icons/fa";
 
 const BaMiniMenu = () => {
+
   let [setCountry, viewCuntryOption] = useState(false);
+  let [destination, setDestination]= useState('BAN')
+  let [flag, setFlag] = useState(flag1)
+  
+
+  let countryAndFlagArr =[
+    {
+        id:"c1",
+        country:"Ban",
+        flag:flag1
+    },
+    {
+        id:"c2",
+        country:"ENG",
+        flag:flag1
+    },
+    {
+        id:"c3",
+        country:"CHI",
+        flag:flag1
+    },
+    {
+        id:"c4",
+        country:"ITAI",
+        flag:flag1
+    }
+  ]
+  let InitialOptionCountry = countryAndFlagArr.filter((countryandflag)=>countryandflag.id != "c1")
+  let [ViewOptionCountry, setViewOPtionCountry]=useState(InitialOptionCountry)
+
 
 // function to handle currenct of the select box
   function handleCurency(currency) {
@@ -14,16 +44,21 @@ const BaMiniMenu = () => {
 
   function setCountryAndFlag( id )
   {
-    console.log(id);
+
+    let CountryAndFlagSearch = countryAndFlagArr.find((countryandflag) => countryandflag.id == id)
+    setDestination(destination = CountryAndFlagSearch.country);
+    setFlag(flag = CountryAndFlagSearch.flag);
+
+    let OptionCountry = countryAndFlagArr.filter((countryandflag)=>countryandflag.id != id)
+    console.log(OptionCountry);
+    setViewOPtionCountry(ViewOptionCountry = OptionCountry)
     viewCuntryOption(!setCountry)
-    let selectedCountry = document.getElementById(`${id}`)
-    selectedCountry.classList.add("hidden")
-    console.log(selectedCountry.classList);
+
   }
  
 
   return (
-    <div className="pt-[83Px] flex justify-between items-center ">
+    <div className="mt-[83Px] flex justify-between items-center ">
 
       <div className="text-white font-bold text-base flex justify-center items-center pl-[315px]">
 
@@ -51,78 +86,45 @@ const BaMiniMenu = () => {
             </div>
 
             <div className="relative">
+
                 <div className="flex justify-center items-center gap-2">
-                    <div className="flex justify-center items-center gap-4"
+                    <div className="flex justify-center items-center gap-5"
                     onClick={() => viewCuntryOption(!setCountry)}
                     >
-                    <div className="h-14px w-15px rounded-full">
-                        <img
-                        src={flag1}
-                        className="object-cover overflow-hidden"
-                        alt=""
-                        />
-                    </div>
-                    <div className="flex justify-center items-center">
-                        <h1 className="text-white">EN</h1>
-                        <FaAngleDown />
-                    </div>
+                        <div className="h-14px w-15px rounded-full">
+                            <img
+                            src={flag}
+                            className="object-cover overflow-hidden"
+                            alt=""
+                            />
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <h1 className="text-white">{destination}</h1>
+                            <FaAngleDown />
+                        </div>
                     </div>
                 </div>
 
-                <div className={`${setCountry ? 'block bg-yellow-300 text-black absolute top-5 h-[89px] w-[79px] ' : 'hidden'}`}>
-            
-                    <div className="flex justify-center items-center gap-4" id="c1" onClick={(e)=>setCountryAndFlag(e.currentTarget.id)}>
-                        <div className="h-14px w-15px rounded-full">
-                            <img
-                            src={flag1}
-                            className="object-cover overflow-hidden"
-                            alt=""
-                            />
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <h1 className=" text-[15px] font-normal">BAN</h1>
-                        
-                        </div>
-                    </div>
-                    <div className="flex justify-center items-center gap-4" id="c2" onClick={(e)=>setCountryAndFlag(e.currentTarget.id)}>
-                        <div className="h-14px w-15px rounded-full">
-                            <img
-                            src={flag1}
-                            className="object-cover overflow-hidden"
-                            alt=""
-                            />
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <h1 className=" text-[15px] font-normal">ENG</h1>
-                        
-                        </div>
-                    </div>
-                    <div className="flex justify-center items-center gap-4" id="c3" onClick={(e)=>setCountryAndFlag(e.currentTarget.id)}>
-                        <div className="h-14px w-15px rounded-full">
-                            <img
-                            src={flag1}
-                            className="object-cover overflow-hidden"
-                            alt=""
-                            />
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <h1 className=" text-[15px] font-normal">CHI</h1>
+                <div className={`${setCountry ? 'block  text-black absolute right-1 top-5 h-[73px] w-[90px] bg-white rounded-md' : 'hidden'}`}>
+
+                    {
+                        ViewOptionCountry.map((option)=>(
+                            <div className="flex justify-center items-center gap-5" id={option.id} onClick={(e)=>setCountryAndFlag(e.currentTarget.id)} key={option.id}>
+                            <div className="h-14px w-15px rounded-full">
+                                <img
+                                src={option.flag}
+                                className="object-cover overflow-hidden"
+                                alt=""
+                                />
+                            </div>
+                            <div className="flex justify-center items-center">
+                                <h1 className=" text-[15px] font-normal">{option.country}</h1>
                             
-                        </div>
-                    </div>
-                    <div className="flex justify-center items-center gap-4" id='c4' onClick={(e)=>setCountryAndFlag(e.currentTarget.id)}>
-                        <div className="h-14px w-15px rounded-full">
-                            <img
-                            src={flag1}
-                            className="object-cover overflow-hidden"
-                            alt=""
-                            />
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <h1 className=" text-[15px] font-normal">ITai</h1>
-                            
-                        </div>
-                    </div>
+                            </div>
+                        </div> 
+                       ))
+                    }
+                    
                 </div>
             </div>
 
