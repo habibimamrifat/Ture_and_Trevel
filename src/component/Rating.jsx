@@ -39,9 +39,9 @@ const Rating = ({retting}) => {
     <div className="h-7 mb-2 flex justify-center items-center gap-1 bg-transparent rounded-3xl px-2 ">
       {countingSter.map((ster, index) => {
         if (ster === "fullster") {
-          return <FaStar key={index} className="text-[#FFC107] " />;
+          return <FaStar key={index} className="text-[#FF3B00] " />;
         } else if (ster === "halflster") {
-          return <FaRegStarHalfStroke key={index} className="text-[#FFC107]" />;
+          return <FaRegStarHalfStroke key={index} className="text-[#FF3B00]" />;
         } else if (ster === "emptyster") {
           return <FaStar key={index} />;
         }

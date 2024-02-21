@@ -6,10 +6,10 @@ const MptCard = ({ aboutTure, index }) => {
 
 
   return (
-    <div className="w-[570px] h-[360px] rounded-2xl relative">
+    <div className="w-[550px] h-[350px] rounded-2xl relative">
       <img src={aboutTure.img} alt="" className="bg-cover bg-center" />
 
-      <div className="absolute top-0 bottom-0 left-0 right-0 bg-black/20 rounded-2xl">
+      <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl">
 
         <div className="flex justify-between mx-[33px] my-[35px]">
           <div className="flex justify-center items-center gap-1">

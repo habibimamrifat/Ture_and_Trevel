@@ -7,8 +7,8 @@ import { LuUserCheck, LuUserX } from "react-icons/lu";
 
 const BabotttomSection = () => {
   return (
-    <div className="flex justify-center items-center mt-[88px]">
-      <div className="w-[1047px] h-[225px] border-2 rounded-3xl overflow-hidden border-gray-400 shadow-md shadow-slate-500">
+    <div className="flex justify-center items-center mt-[88px] ">
+      <div className="w-[1047px] h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500">
 
         <div className="h-[57px] w-full flex text-xl font-semibold">
           <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
