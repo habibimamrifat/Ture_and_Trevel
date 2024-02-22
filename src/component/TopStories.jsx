@@ -33,9 +33,9 @@ const TopStories = () => {
   ];
 
   return (
-    <div>
-      <div className="ml-[104px] mr-[104px] mt-[80px]">
-        <h1 className="text-[48px] font-medium text-black">Top Destinations</h1>
+    <div className=" w-[1440px]">
+      <div className="ml-[104px] mr-[104px] mt-[80px] ">
+        <h1 className="text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex justify-between mt[10px]">
           <h1 className="text-[20px] font-normal text-[#645E5E]">
             Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.

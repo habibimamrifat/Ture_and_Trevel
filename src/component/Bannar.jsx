@@ -5,7 +5,7 @@ import BaSlider from './BaSlider';
 
 const Bannar = () => {
   return (
-    <div> 
+    <div className='w-[1440px]' id='bannar'> 
     <BaSlider/>
     
     </div>

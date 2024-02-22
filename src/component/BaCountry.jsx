@@ -2,7 +2,7 @@ import React from "react";
 
 const BaCountry = () => {
   return (
-    <div className="text-white flex justify-between items-center mt-[50px] ">
+    <div className="text-white flex justify-between items-center mt-[93px] ">
       <div className="ml-[110px]">
             <div className="w-[312px] h-[113px] relative ">
 

@@ -7,3 +7,8 @@
 .slick-slide > div{
     margin-left: 10px;
 }
+
+html {
+    --scroll-behavior: smooth!important;
+    scroll-behavior: smooth!important;
+    }

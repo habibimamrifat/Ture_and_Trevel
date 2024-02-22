@@ -59,7 +59,8 @@ const Review = () => {
   const [width, setWidth] = useState(600);
 
   return (
-    <div className="mt-[77px] pb-8">
+   <div className="w-[1440px]">
+     <div className="mt-[77px] pb-8">
       <div>
         <h1 className="text-[32px] font-normal text-[#FF3B00] text-center">
           Testimonials and Review
@@ -67,16 +68,19 @@ const Review = () => {
         <h1 className=" text-[48px] font-normal text-black text-center">
           What They’re Saying
         </h1>
-        <div className="mt-[53px] mx-[130px] flex justify-center items-center pb-10 ">
+        <div className="mt-[53px] mx-[100px] flex justify-center items-center pb-10 ">
         <Swiper
         pagination={{
           dynamicBullets: true,
+          
         }}
+        
         modules={[Pagination]}
         loop={true}
         className="mySwiper"
         slidesPerView={3}
         spaceBetween={30}
+        
       >
             
             {reviewDataSet.map((review, index) => (
@@ -92,7 +96,7 @@ const Review = () => {
                     alt=""
                   />
                 </div>
-                <div className="w-[320px] h-[380px] mt-[15px] shadow-xl shadow-[#00000040] ">
+                <div className="w-[352px] h-[384px] mt-[15px] shadow-xl shadow-[#00000040] ">
                   <div className="flex flex-col justify-center items-center">
                     <div className="mt-[47px]">
                       <Rating retting={review.CustomerReting} />
@@ -150,6 +154,7 @@ const Review = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

@@ -55,7 +55,8 @@ const MostPopulerTures = () => {
     },
   ];
   return (
-    <div className="mt-[251px] ml-[103px] mr-[100px]">
+    <div className="w-[1440px]">
+      <div className="mt-[251px] ml-[103px] mr-[100px]">
       <div>
       <div>
         <h1 className="text-5xl font-medium text-black">Most Popular Tours</h1>
@@ -68,10 +69,10 @@ const MostPopulerTures = () => {
         <div className="flex justify-center items-center gap-16 mt-[10px]">
           <h1 className="text-xl font-normal text-[#645E5E]">View All Tours</h1>
           <div className=" flex justify-center items-center gap-2">
-            <button className="w-[42px] h-[41px] rounded-full bg-black flex justify-center items-center text-white " onClick={previous}>
+            <button className="w-[42px] h-[41px] rounded-full bg-[#645E5E]/30 flex justify-center items-center text-white " onClick={previous}>
               <FaArrowLeft />
             </button>
-            <button className="w-[42px] h-[41px] rounded-full bg-black flex justify-center items-center text-white " onClick={next}>
+            <button className="w-[42px] h-[41px] rounded-full bg-[#645E5E]/30 flex justify-center items-center text-white " onClick={next}>
               <FaArrowRight />
             </button>
           </div>
@@ -80,12 +81,6 @@ const MostPopulerTures = () => {
       </div>
       </div>
 
-      {/* {MostPopulerTureDataSet.map((populerTure, index) => (
-        <MptCard key={index} aboutTure={populerTure} index={index} />
-      ))} */}
-
-
-      {/* incase of emmergency delete everything undernith  */}
 
       <div className="slider-container mt-[40px] w-[full] rounded-3xl">
       <Slider
@@ -104,6 +99,7 @@ const MostPopulerTures = () => {
     </div>
 
         {/* above this  */}
+    </div>
     </div>
   );
 };

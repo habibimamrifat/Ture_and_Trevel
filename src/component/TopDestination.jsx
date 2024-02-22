@@ -34,14 +34,14 @@ const TopDestination = () => {
         },
     ]
   return (
-    <div>
-      <div className='ml-[104px] mr-[104px]'>
+    <div className='w-[1440px] mt-[81px]'>
+      <div className='ml-[104px] mr-[104px] '>
         <h1 className='text-[48px] font-medium text-black'>Top Destinations</h1>
         <div className='flex justify-between mt[10px]'>
             <h1 className='text-[20px] font-normal text-[#645E5E]'>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</h1>
             <button className='text-[20px] font-normal text-[#645E5E]'> View All Destinations</button>
         </div>
-        <div className='flex flex-wrap gap-x-10 gap-y-7 mt-[40px]'>
+        <div className='flex flex-wrap gap-x-10 gap-y-7 mt-[40px] justify-center items-center w-full'>
 
             {
                 topDestinationData.map((topPlacetoVisit)=>(
