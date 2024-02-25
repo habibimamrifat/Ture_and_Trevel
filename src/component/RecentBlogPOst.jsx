@@ -86,35 +86,6 @@ const RecentBlogPOst = () => {
 
             </div>
           ))}
-
-          {/* <div className="w-[382px]" >
-            <div className="w-[382px] h-[252px]">
-              <div className="relative">
-              <img src="" alt="" className="w-full h-full object-cover"/>
-              </div>
-              <div className="absolute top-2 right-2 block">
-                <a href="http://"><button className="w-[166px] h-[47px] bg-[#FF3B00] text-white text-[24px] font-bold">
-                    Streem
-                </button>
-                </a>
-              </div>
-            </div>
-            <div className="mt-[33px] text-start">
-                <div className="flex justify-center items-center gap-[15px]">
-                        <div className="w-[52px] h-[52px] rounded-full">
-                        <img src="" alt="" />
-                        </div>
-                        <div>
-                        <h1 className="text-xl font-semibold text-[#645E5E]">give the name</h1>
-                        </div>
-                </div>
-                <div className="mt-[22px] w-[273px] h-[90px]">
-                    <p className="text-xl font-normal text-[#645E5E]">
-                        Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.
-                    </p>
-                </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

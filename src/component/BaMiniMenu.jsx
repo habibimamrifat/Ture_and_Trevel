@@ -58,7 +58,7 @@ const BaMiniMenu = () => {
  
 
   return (
-    <div className="mt-[83Px] flex justify-between items-center ">
+    <div className="pt-[83Px] flex justify-between items-center ">
 
       <div className="text-white font-bold text-base flex justify-center items-center pl-[315px]">
 

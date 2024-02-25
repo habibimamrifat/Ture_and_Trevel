@@ -54,9 +54,6 @@ const Review = () => {
     
   ];
 
-  //   slicl slider code here
-  const [display, setDisplay] = useState(true);
-  const [width, setWidth] = useState(600);
 
   return (
    <div className="w-[1440px]">
@@ -84,10 +81,9 @@ const Review = () => {
       >
             
             {reviewDataSet.map((review, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <div
                 className="flex flex-col items-center justify-centers p-[50px] "
-                key={index}
               >
                 <div className=" rounded-full">
                   <img

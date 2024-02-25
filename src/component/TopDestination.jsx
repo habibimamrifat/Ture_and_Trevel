@@ -44,8 +44,8 @@ const TopDestination = () => {
         <div className='flex flex-wrap gap-x-10 gap-y-7 mt-[40px] justify-center items-center w-full'>
 
             {
-                topDestinationData.map((topPlacetoVisit)=>(
-                    <div className='w-[350px] h-[250px] relative rounded-[20px] overflow-hidden'>
+                topDestinationData.map((topPlacetoVisit, index)=>(
+                    <div className='w-[350px] h-[250px] relative rounded-[20px] overflow-hidden' key={index}>
 
             
                 <div className='absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center '>
