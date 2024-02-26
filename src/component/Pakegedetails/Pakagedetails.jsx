@@ -21,6 +21,10 @@ import TopPakegeInclucated from "./TopPakegeInclucated";
 import Location from "./Location";
 import TopStories from "../TopStories"
 import PakageReview from "./PakageReview";
+import Footer from "../Footer"
+import FootrtBottom from "../FooterBottom"
+import Prefooter from "../Prefooter";
+import SideNavBar from "./SideNavBar";
 
 const Pakagedetails = () => {
  
@@ -42,15 +46,25 @@ const Pakagedetails = () => {
         <TpBannaeBottomSEction />  
       </div>
 
-      <div className="ml-[37px] w-[879px]">
+      <div className="grid grid-cols-4 gap-4">
+
+      <div className="ml-[37px] col-span-3">
       <OverView/>
       <TopPakegeInclucated/>
       <Location/>
       <TopStories/>
       <PakageReview />
+      </div>
+
+      <div className="col-span-1 mr-[35px]">
+        <SideNavBar/>
+      </div>
 
       </div>
-      
+
+
+      <Prefooter/>
+      <Footer/>
     </div>
  
   );

@@ -5,8 +5,8 @@ import { CiMail } from "react-icons/ci";
 
 const Newsteller = () => {
   return (
-    <div className='w-[1440px]'>
-      <div className='flex justify-center text-white w-[1440px]'>
+    <div className='w-full'>
+      <div className='flex justify-center text-white w-full'>
       <div className='w-[1240px] h-[300px] flex items-center justify-around' style={{backgroundImage:`url(${background})`}}>
 
         <div className='w-[219px] h-[83px]'>

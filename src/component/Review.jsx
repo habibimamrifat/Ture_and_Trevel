@@ -56,7 +56,7 @@ const Review = () => {
 
 
   return (
-   <div className="w-[1440px]">
+   <div className="w-full">
      <div className="mt-[77px] pb-8">
       <div>
         <h1 className="text-[32px] font-normal text-[#FF3B00] text-center">

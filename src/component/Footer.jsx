@@ -8,7 +8,7 @@ import FooterBottom from './FooterBottom';
 
 const Footer = () => {
   return (
-    <div className='bg-black w-[1440px] text-white relative pb-[177px]'>
+    <div className='bg-black w-full text-white relative pb-[177px]'>
         
       <div className='pt-[183px] mx-[112px] grid grid-cols-12'>
 

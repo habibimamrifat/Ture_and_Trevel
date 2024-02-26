@@ -33,7 +33,7 @@ const TopStories = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full flex justify-center items-center" id="stories">
       <div className=" mt-[80px] ">
         <h1 className="text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex justify-between mt[10px]">
@@ -45,7 +45,7 @@ const TopStories = () => {
             View All Destinations
           </button>
         </div>
-        <div className="flex  gap-5 mt-[40px]">
+        <div className="flex justify-center items-center flex-wrap gap-5 mt-[40px]  h-[374px] overflow-hidden">
           {topStoriesDataset.map((topStories, index) => (
             <div className=" h-[374px] w-[267px] relative rounded-[20px] overflow-hidden" key={index}>
               <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center ">

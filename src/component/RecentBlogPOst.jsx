@@ -38,7 +38,7 @@ const RecentBlogPOst = () => {
     },
   ];
   return (
-    <div className="w-[1440px]">
+    <div className="w-full">
       <div className="mx-[103px] mb-[80px] ">
         <h1 className="font-medium text-[48px] text-black">
           Recent Blog Posts

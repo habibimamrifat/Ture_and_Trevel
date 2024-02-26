@@ -13,7 +13,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden w-[1440px]">
+    <div className="overflow-hidden w-full">
       <Bannar />
       <MostPopulerTures />
       <TopDestination />

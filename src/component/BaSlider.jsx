@@ -50,12 +50,14 @@ const BaSlider = () => {
 
   return (
     <div className="relative ">
-      <div className="slider-container h-[732px] w-[1441px]" >
+      <div className="slider-container h-[732px] w-full " >
         <Slider
           ref={(slider) => {
             sliderRef = slider;
           }}
           {...settings}
+
+      
         >
           <div key={1}>
             <img src={causolBg} alt="" />

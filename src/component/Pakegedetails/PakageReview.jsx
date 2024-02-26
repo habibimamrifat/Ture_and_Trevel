@@ -3,7 +3,7 @@ import person from "../../assets/img/Ellipse 56.png";
 import Ratting from "../Rating";
 const PakageReview = () => {
   return (
-    <div className="mt-[60px]">
+    <div className="mt-[60px] mb-[95px]" id='reviews'>
       <div>
         <div className="flex gap-5 items-center">
           <div className="w-[55px] h-[55px] rounded-full bg-[#FF3B00] text-white flex items-center justify-center">
@@ -11,7 +11,7 @@ const PakageReview = () => {
           </div>
           <h1 className="text-[60px] font-semibold text-black">Reviews 1</h1>
         </div>
-        <div className="mt-[65px] bg-[#EBE7E7] w-[858px] h-[228px] rounded-xl">
+        <div className="mt-[65px] bg-[#EBE7E7] w-full h-auto rounded-xl">
           <div className=" text-[20px] font-normal m-2 p-[35px]">
             But I must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
@@ -44,7 +44,7 @@ const PakageReview = () => {
         </div>
       </div>
 
-      <div className="w-full h-[553px] bg-[#F1EAEA]">
+      <div className="w-full h-[553px] bg-[#F1EAEA] mt-[36px]">
         <div className="mx-[56px]">
           <div className="flex justify-between  pt-[45px]">
             <h1 className="text-[20px] font-normal text-black">

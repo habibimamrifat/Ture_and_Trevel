@@ -34,7 +34,7 @@ const TopDestination = () => {
         },
     ]
   return (
-    <div className='w-[1440px] mt-[81px]'>
+    <div className='w-full mt-[81px]'>
       <div className='ml-[104px] mr-[104px] '>
         <h1 className='text-[48px] font-medium text-black'>Top Destinations</h1>
         <div className='flex justify-between mt[10px]'>

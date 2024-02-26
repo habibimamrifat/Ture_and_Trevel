@@ -6,7 +6,7 @@ import imageU from "../assets/img/Uimg.png"
 
 const OurPartners = () => {
   return (
-    <div className='w-[1440px] h-[283px] bg-[#D9D9D9] mt-[81px]  flex justify-center items-center'>
+    <div className='w-full h-[283px] bg-[#D9D9D9] mt-[81px]  flex justify-center items-center'>
       <div className='flex justify-around items-center gap-16 ml-[144px] mr-[144px]'>
       <img src={Opimg} alt="" />
       <img src={imageS} alt="" />

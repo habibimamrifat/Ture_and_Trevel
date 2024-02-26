@@ -10,7 +10,7 @@ const Prefooter = () => {
     
   return (
     <div>
-      <div className='w-[1440px] h-[284px] flex mt-[80px]'>
+      <div className='w-full h-[284px] flex mt-[80px]'>
 
         <div >
             <img src={xy} alt="" className='h-full w-full object-cover' />
