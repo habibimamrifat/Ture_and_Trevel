@@ -17,6 +17,10 @@ import BaNavbar from "../BaNavbar";
 import TpBannarSection from "./TpBannarSection";
 import TpBannaeBottomSEction from "./TpBannaeBottomSEction";
 import OverView from "./OverView";
+import TopPakegeInclucated from "./TopPakegeInclucated";
+import Location from "./Location";
+import TopStories from "../TopStories"
+import PakageReview from "./PakageReview";
 
 const Pakagedetails = () => {
  
@@ -40,6 +44,10 @@ const Pakagedetails = () => {
 
       <div className="ml-[37px] w-[879px]">
       <OverView/>
+      <TopPakegeInclucated/>
+      <Location/>
+      <TopStories/>
+      <PakageReview />
 
       </div>
       

@@ -33,21 +33,21 @@ const TopStories = () => {
   ];
 
   return (
-    <div className=" w-[1440px]">
-      <div className="ml-[104px] mr-[104px] mt-[80px] ">
+    <div className="w-full">
+      <div className=" mt-[80px] ">
         <h1 className="text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex justify-between mt[10px]">
           <h1 className="text-[20px] font-normal text-[#645E5E]">
             Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.
           </h1>
           <button className="text-[20px] font-normal text-[#645E5E]">
-            {" "}
+            
             View All Destinations
           </button>
         </div>
         <div className="flex  gap-5 mt-[40px]">
           {topStoriesDataset.map((topStories, index) => (
-            <div className="w-[276px] h-[374px] relative rounded-[20px] overflow-hidden" key={index}>
+            <div className=" h-[374px] w-[267px] relative rounded-[20px] overflow-hidden" key={index}>
               <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center ">
                <div className="flex flex-col justify-center items-center">
                <div className="h-[100px] w-[100px] rounded-full">
