@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaBookmark } from "react-icons/fa";
 
 const SideNavBar = () => {
   const [isActiveLink, setIsActiveLink] = useState("");
@@ -7,8 +8,28 @@ const SideNavBar = () => {
     setIsActiveLink(link);
   };
   return (
-    <div className=" w-full h-[500px] bg-black sticky top-[10%] border-[10px] border-red-900">
-      <div className="mt-[53px] ml-[68px] text-[24px] font-medium text-white">
+    <div className=" w-full h-[580px] sticky top-[1%] flex flex-col justify-center items-center ">
+
+      <div className=" text-[24px] font-medium text-white bg-black w-full rounded-[10px]">
+       <div className="p-[68px]">
+       <div className="flex items-center gap-2">
+          <div
+            className={
+              isActiveLink === "Photograpgs"
+                ? "w-[11px] h-[11px] bg-[#FF3B00] rounded-full"
+                : "hidden"
+            }
+          ></div>
+          <a
+            href="#Photograpgs"
+            onClick={() => checekActiveLink("Photograpgs")}
+            className={
+              isActiveLink === "Photograpgs" ? "text-red-500" : "text-white"
+            }
+          >
+            Photograpgs
+          </a>
+        </div>
         <div className="flex items-center gap-2">
           <div
             className={
@@ -101,8 +122,22 @@ const SideNavBar = () => {
             Reviews
           </a>
         </div>
-        
+       </div>
       </div>
+      <div className="w-full rounded-[10px] overflow-hidden mt-[15px]">
+        <button className="w-full h-[127px] bg-[#FF3B00] text-white ">
+          <h1 className="text-[24px] font-bold">Book Now</h1>
+            <h1 className="text-[32px] font-bold">From $500</h1>
+        </button>
+      </div>
+
+      <div className="flex items-center gap-2 mt-[15px]">
+        <div className="w-[61px] h-[61px] rounded-full flex justify-center items-center shadow-md shadow-[#645E5E]">
+        <FaBookmark className="text-[#FF3B00]" />
+        </div>
+        <h1 className="text-[25px] font-normal text-[#645E5E]">Add to favourites</h1>
+      </div>
+
     </div>
   );
 };

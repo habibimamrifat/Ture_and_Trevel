@@ -21,7 +21,7 @@ const TpBannarSection = () => {
 
   const topPakegeImg = [due, grass, bluewave, due, grass, bluewave];
   return (
-    <div className="mt-[32px] ms-[32px] me-8">
+    <div className="mt-[32px] ms-[32px] me-8" id='Photograpgs'>
       <h1 className="font-bold text-xl text-white">
         Home / Node / A trip to the mighty desert
       </h1>

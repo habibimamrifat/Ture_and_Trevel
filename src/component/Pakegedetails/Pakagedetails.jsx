@@ -56,7 +56,7 @@ const Pakagedetails = () => {
       <PakageReview />
       </div>
 
-      <div className="col-span-1 mr-[35px]">
+      <div className="col-span-1 mt-[15px] mr-[30px]">
         <SideNavBar/>
       </div>
 
