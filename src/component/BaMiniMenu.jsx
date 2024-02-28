@@ -136,8 +136,21 @@ const BaMiniMenu = () => {
         <button>
           <h1>Sign Up</h1>
         </button>
+
         <h1>/</h1>
-        <button>Sign In</button>
+
+        <button>
+          <h1>
+          Sign In
+          </h1>
+          </button>
+
+          <div className=" bg-white/20 absolute top-0 bottom-0 left-0 right-0">
+            <div className="h-[600px] w-96 bg-red-950 absolute right-0">
+
+            </div>
+
+          </div>
       </div>
     </div>
   );
