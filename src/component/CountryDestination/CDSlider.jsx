@@ -1,11 +1,33 @@
 
 import React from 'react';
-import MptCard from "../MptCard";
+import CDCard from "./CDCard";
 import ptp1 from "../../assets/img/Rectangle 21.png";
 import ptp2 from "../../assets/img/Rectangle 22.png";
 
 
+import { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+
+
 const CDSlider = () => {
+
+  const pagination = { 
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
+
+  // incase of blust 
 
   const MostPopulerTureDataSet = [
     {
@@ -28,30 +50,244 @@ const CDSlider = () => {
       totalReviews: 3,
       img: ptp2,
     },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
+    {
+      location: "Australia",
+      bookMarked: "no",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 2.5,
+      totalReviews: 3,
+      img: ptp1,
+    },
+    {
+      location: "NorthAmerica",
+      bookMarked: "yes",
+      detail: "Lorem Ipsum is simply dummy text",
+      days: 5,
+      totalCosting: 500,
+      ratting: 5,
+      totalReviews: 3,
+      img: ptp2,
+    },
   ];
-   
+ 
+  let totalSlider = Math.floor(MostPopulerTureDataSet.length/8) ;
+  console.log(totalSlider);
+  let sliderArray = Array.from({ length: totalSlider }, (_, index) => index + 1);
+  console.log(sliderArray);
+
   return (
-    <div className='h-[100vh] w-[100%] bg-white '>
-     <div className='h-full w-full  grid-rows-12 gap-[50px]'>
-        <div className='bg-orange-700 row-span-4 w-full h-[225px] my-[20px] grid grid-cols-12'>
-          <div className='col-span-3 bg-blue-500 m-4 h-full rounded-lg'>
-            
-          </div>
-          <div className='col-span-6 bg-blue-500 m-4 h-full rounded-lg'></div>
-          <div className='col-span-3 bg-blue-500 m-4 h-full rounded-lg'></div>
-        </div>
+    <div className='h-auto w-[100%] mt-[120px] '>
+       <Swiper
+        pagination={pagination}
+        modules={[Pagination]}
+        className="mySwiper "
+      >
+        {sliderArray.map((slide) => (
+          <SwiperSlide key={slide}>
+            <div className='h-full w-full grid grid-rows-12 px-[100px] pb-8'>
 
-        <div className='bg-orange-700 row-span-4 w-full h-[225px] my-[20px] grid grid-cols-12'>
-          <div className='col-span-6 bg-blue-500 m-4 h-full rounded-lg'></div>
-          <div className='col-span-6 bg-blue-500 m-4 h-full rounded-lg'></div>
-        </div>
+              <div className=' row-span-4 w-full h-[190px] my-[15px] grid grid-cols-12'>
 
-        <div className='bg-orange-700 row-span-4 w-full h-[225px] my-[20px] grid grid-cols-12'>
-          <div className='col-span-3 bg-blue-500 m-4 h-full rounded-lg'></div>
-          <div className='col-span-6 bg-blue-500 m-4 h-full rounded-lg'></div>
-          <div className='col-span-3 bg-blue-500 m-4 h-full rounded-lg'></div>
-        </div>
-     </div>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8]} />
+                </div>
+                <div className='col-span-6 m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 1]} />
+                </div>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 2]} />
+                </div>
+
+              </div>
+
+
+              <div className=' row-span-4 w-full h-[190px] my-[5px] grid grid-cols-12'>
+                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 3]} />
+                </div>
+                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 4]} />
+                </div>
+              </div>
+
+
+              <div className=' row-span-4 w-full h-[190px] my-[5px] grid grid-cols-12'>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 5]} />
+                </div>
+                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 6]} />
+                </div>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 7]} />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   )
 }

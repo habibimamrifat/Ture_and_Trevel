@@ -2,12 +2,12 @@ import React from "react";
 import { FaBookmark } from "react-icons/fa";
 import Rating from "./Rating";
 
-const MptCard = ({ aboutTure, index }) => {
+const MptCard = ({ aboutTure,  }) => {
 
 
   return (
     <div className="w-[578px] h-[360px] rounded-2xl relative">
-      <img src={aboutTure.img} alt="" className="bg-cover bg-center" />
+      <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover" />
 
       <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl">
 

@@ -7,11 +7,11 @@ import CDSlider from './CDSlider'
 
 const CDBanner = () => {
   return (
-    <div className='w-full h-[1945px]' style={{backgroundImage: `url(${bannar})` }}>
+    <div className='w-full h-auto ' style={{backgroundImage: `url(${bannar})` }}>
      <BaMiniNavMenu />
      <BaNavBar />
 
-     <div className='mx-[100px]'>
+     <div className=''>
      <CDTravelLisr />
      <CDSlider/>
      </div>
