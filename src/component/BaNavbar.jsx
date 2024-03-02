@@ -11,14 +11,14 @@ const BaNavbar = () => {
         </div>
         <div className='text-xl font-semibold text-white'>
             <ul className='flex justify-around gap-10'>
-                <li>HOME</li>
+                <li><a href="http:/">HOME</a></li>
                 <li><div className='flex justify-center items-center'>
                     <h1>FEATURES</h1>
                     <FaChevronDown/>
                     </div>
                 </li>
-                <li>PAGES</li>
-                <li>TOURS</li>
+                <li><a href="http:pakagedetails">PAGES</a></li>
+                <li><a href="http:country_destination">TOURS</a></li>
                 <li>CARS</li>
                 <li>HOTELS</li>
                 <li>FLIGHTS</li>

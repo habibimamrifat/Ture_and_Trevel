@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import flag1 from "../assets/img/Ellipse 30.png";
 import { FaAngleDown } from "react-icons/fa";
-import SignUpPage from "./SignInPage";
-import SignIn from "./SignUp";
+import SignUpPage from "./SignUpPageFinal";
+import SignIn from "./SignInFinal";
+import ForgetPassword from "./ForgetPassword";
 
 const BaMiniMenu = () => {
   let [setCountry, viewCuntryOption] = useState(false);
@@ -166,24 +167,24 @@ const BaMiniMenu = () => {
           <h1>Sign In</h1>
         </button>
 
-        <div className={`absolute bg-white ease-in-out  ${ isSignupClosed === 'Signup' || isSignupClosed === "Signin" ? ' top-0 right-0 ' : 'delay-500 -top-[99999px] -right-[99999px]' } `}>
+        <div className={`absolute bg-white ease-in-out  ${ isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ? ' top-0 right-0 ' : 'delay-500 -top-[99999px] -right-[99999px]' } `}>
 
 
           <div
             className={`bg-white absolute right-0 shadow-md shadow-gray-400 z-[100] transition-min-height transition-min-w duration-1000 ${
-              isSignupClosed === 'Signup' || isSignupClosed === "Signin" ? "min-h-[964px] min-w-[550px] " : "min-w-0 min-h-0"
+              isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ? "min-h-[964px] min-w-[550px] " : "min-w-0 min-h-0"
             }`}
           >
 
-           <button className={`w-[50px] h-[50px] rounded-full flex justify-center items-center bg-black/20 absolute right-5 top-2 ${ isSignupClosed === 'Signup' || isSignupClosed === "Signin" ?' block':'hidden'} `} onClick={() => setSignupPeramiter(null)}>
+           <button className={`w-[50px] h-[50px] rounded-full flex justify-center items-center bg-black/20 absolute right-5 top-2 ${ isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ?' block':'hidden'} `} onClick={() => setSignupPeramiter(null)}>
 
                 <h1 className="text-[12px]" >X</h1>
             </button>
 
-            <div className={`mt-[80px] ms-[20px] me-[40px] transition-all duration-500 ease-in-out overflow-hidden ${isSignupClosed === 'Signup' || isSignupClosed === "Signin" ?'max-h-full max-w-full':'max-h-0 max-w-0'}`}>
+            <div className={`mt-[80px] ms-[20px] me-[40px] transition-all duration-500 ease-in-out overflow-hidden ${isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ?'max-h-full max-w-full':'max-h-0 max-w-0'}`}>
             
             {
-               isSignupClosed === "Signup" ? <SignUpPage isSignupClosed={isSignupClosed} setIsSignUpClosed={setIsSignUpClosed }/> : isSignupClosed === "Signin" ? <SignIn /> : null
+               isSignupClosed === "Signup" ? <SignUpPage isSignupClosed={isSignupClosed} setIsSignUpClosed={setIsSignUpClosed }/> : isSignupClosed === "Signin" ? <SignIn isSignupClosed={isSignupClosed} setIsSignUpClosed={setIsSignUpClosed } /> : isSignupClosed === "Forgetpassword" ? <ForgetPassword isSignupClosed={isSignupClosed} setIsSignUpClosed={setIsSignUpClosed } /> :null
             }
               
             </div>

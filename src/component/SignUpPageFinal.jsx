@@ -23,9 +23,11 @@ const SignUpPage = ({isSignupClosed , setIsSignUpClosed}) => {
                   <input type="text" className="h-[65px] rounded-[10px] bg-[#F1EAEA] mt-[12px] w-[390px]" />
                   <p className="font-normal text-[15px] text-[#B6A7A7] mt-[20px]">Several special characters are allowed, including space, period (.), hyphen (-), apostrophe ('), underscore (_), and the @ sign.</p>
 
+                
                   <button className="h-[65px] rounded-[10px] bg-[#FF3B00] mt-[12px] w-[390px] text-white flex justify-center items-center">
                     <h1 className="text-[20px] font-semibold">Create a Account</h1>
                   </button>
+                  
 
                 </div>
 
