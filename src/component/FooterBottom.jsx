@@ -7,12 +7,12 @@ import { FaInstagram } from "react-icons/fa";
 const FooterBottom = () => {
   return (
     <div>
-      <div className='w-[800px] h-[154px] mt-[23px] flex absolute bottom-0 right-0 rounded-ss-2xl overflow-hidden'>
+      <div className='w-[80%] h-[154px] mt-[23px] flex justify-around absolute bottom-0 right-0 rounded-ss-2xl overflow-hidden '>
             <div className='w-[161px] h-full bg-[#FF3B00] flex justify-center items-center'>
                 <FaArrowDown className='text-3xl text-white font-normal'/>
             </div>
 
-            <div className='bg-white w-full flex  justify-around items-center'>
+            <div className='bg-white w-full flex  justify-around items-center xsm:flex-wrap xsm:py-[10px]'>
                 <div className='flex justify-around gap-5'>
                     <FiFacebook className='text-3xl text-black font-normal' />
                     <CiTwitter className='text-3xl text-black font-normal' />

@@ -35,11 +35,11 @@ const TopDestination = () => {
     ]
   return (
     <div className='w-full mt-[81px]'>
-      <div className='ml-[104px] mr-[104px] '>
-        <h1 className='text-[48px] font-medium text-black'>Top Destinations</h1>
-        <div className='flex justify-between mt[10px]'>
-            <h1 className='text-[20px] font-normal text-[#645E5E]'>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</h1>
-            <button className='text-[20px] font-normal text-[#645E5E]'> View All Destinations</button>
+      <div className='xsm:ml-[10px] lg:ml-[104px] xsm:mr-[10px] lg:mr-[104px] '>
+        <h1 className='xsm:text-[30px] lg:text-[48px] font-medium text-black'>Top Destinations</h1>
+        <div className='flex xsm:flex-col md:flex-row md:justify-between mt[10px]'>
+            <h1 className='xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]'>Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.</h1>
+            <button className='xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]'> View All Destinations</button>
         </div>
         <div className='flex flex-wrap gap-x-10 gap-y-7 mt-[40px] justify-center items-center w-full'>
 

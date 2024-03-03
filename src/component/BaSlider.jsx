@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import causolBg from "../assets/img/herobg.png";
-import { CustomPrevArrow, CustomNextArrow } from "./Button";
+
 import BabotttomSection from "./BabotttomSection";
 
 // carusol impoartment ends
@@ -38,44 +38,38 @@ const BaSlider = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     beforeChange: (current, next) => {
       setOldSlide(current);
       setActiveSlide(next);
     },
 
     afterChange: (current) => setActiveSlide2(current),
+    
   };
 
   //   carusol coding ends
-
+  
   return (
-    <div className="relative ">
-      <div className="slider-container h-[732px] w-full " >
+    <div className="relative h-screen ">
+      <div className="slider-container h-full w-full " >
         <Slider
+        
           ref={(slider) => {
             sliderRef = slider;
           }}
           {...settings}
-
+        
       
         >
           <div key={1}>
-            <img src={causolBg} alt="" />
+            <img src={causolBg} alt="not found" className="object-contain h-full w-full bg-amber-300" />
           </div>
           <div key={2}>
-            <h3>2</h3>
+            <img src={causolBg} alt="not found" className="object-cover h-full w-full bg-amber-300" />
           </div>
           <div key={3}>
-            <h3>3</h3>
-          </div>
-          <div key={4}>
-            <h3>4</h3>
-          </div>
-          <div key={5}>
-            <h3>5</h3>
-          </div>
-          <div key={6}>
-            <h3>6</h3>
+            <img src={causolBg} alt="not found" className="object-cover h-full w-full bg-amber-300" />
           </div>
         </Slider>
 

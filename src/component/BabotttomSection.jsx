@@ -8,38 +8,40 @@ import { LuUserCheck, LuUserX } from "react-icons/lu";
 const BabotttomSection = () => {
   return (
     <div className="flex justify-center items-center mt-[42px] ">
-      <div className="w-[1047px] h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500">
+      <div className="w-[95%] h-auto xl:w-[1047px] xl:h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500">
 
-        <div className="h-[57px] w-full flex text-xl font-semibold">
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+        <div className=" flex xsm:flex-wrap xsm:justify-around lg:flex-nowrap lg:flex-none lg:flex-row lg:h-[57px] text-xl font-semibold w-full xsm:pt-5 xsm:px-5 lg:pt-0 lg:px-0">
+
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
             Hotel
           </button>
 
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Flights
           </button>
 
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Cars
           </button>
 
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Packages
           </button>
 
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Cruise
           </button>
 
-          <button className="w-[175px] h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
+          <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Holiday
           </button>
         </div>
-{/* upper part section  */}
+        {/* upper part section  */}
 
 
 
-        <div className="flex justify-around items-center h-[169px] w-full bg-white">
+        <div className="flex  justify-around items-center xsm:p-10 xsm:flex-col lg:flex-row h-auto lg:h-[169px] w-full bg-white">
+
           <div className="text-start">
             
               <div className="text-xl font-normal text-black flex items-center mb-[14px]">
@@ -50,11 +52,11 @@ const BabotttomSection = () => {
             <input
               type="text"
               placeholder="Location here"
-              className="border-[1px] border-[#948D8D]  rounded-2xl h-[45px] w-[280px] text-base font-normal ps-[23px]"
+              className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] md:w-[280px] text-base font-normal ps-[23px]"
             />
           </div>
 
-          <div className="flex justify-between gap-6">
+          <div className="flex justify-between xsm:flex-col xsm:gap-1 md:flex-row gap-6">
             <div className="text-start">
               
                 <div className="text-xl font-normal text-black flex items-center mb-[14px]">
@@ -65,7 +67,7 @@ const BabotttomSection = () => {
               <input
                 type="text"
                 placeholder="dd/mm/yy"
-                className="border-[1px] border-[#948D8D]  rounded-2xl h-[45px] w-[150px] text-base font-normal ps-[23px]"
+                className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] md:w-[150px] text-base font-normal ps-[23px]"
               />
             </div>
 
@@ -79,7 +81,7 @@ const BabotttomSection = () => {
               <input
                 type="text"
                 placeholder="dd/mm/yy"
-                className="border-[1px] border-[#948D8D]  rounded-2xl h-[45px] w-[150px] text-base font-normal ps-[23px]"
+                className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] md:w-[150px] text-base font-normal ps-[23px]"
               />
             </div>
 
@@ -93,7 +95,7 @@ const BabotttomSection = () => {
               <input
                 type="text"
                 placeholder="Travelers"
-                className="border-[1px] border-[#948D8D]  rounded-2xl h-[45px] w-[150px] text-base font-normal ps-[23px]"
+                className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] md:w-[150px] text-base font-normal ps-[23px]"
               />
             </div>
           </div>
@@ -103,6 +105,7 @@ const BabotttomSection = () => {
               Search
             </button>
           </div>
+
         </div>
       </div>
     </div>

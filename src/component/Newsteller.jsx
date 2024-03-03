@@ -7,20 +7,22 @@ const Newsteller = () => {
   return (
     <div className='w-full'>
       <div className='flex justify-center text-white w-full'>
-      <div className='px-10 py-10 rounded-2xl h-auto flex items-center justify-around flex-wrap bg-no-repeat bg-center' style={{backgroundImage:`url(${background})`}}>
+      <div className='px-4 py-4 rounded-2xl  flex items-center justify-around xsm:flex-col sm:flex-row xsm:h-auto sm:h-[200px] md:h-[300px] w-[90%] bg-no-repeat bg-center ' style={{backgroundImage:`url(${background})`}}>
 
-        <div className='w-[219px] h-[83px]'>
+        <div className=''>
             <h1 className='text-[24px] font-semibold'>Newsletter</h1>
             <p className='text-base font-normal'>Sign Up to receive the best offer</p>
         </div>
 
-        <form action="" className='flex flex-wrap gap-[35px]'>
-        <input type="text" placeholder='Destination' className='w-[372px] h-[74px] bg-black/20 rounded-2xl pl-[27px] text-white'/>
-        <input type="text" placeholder='Email'className='w-[372px] h-[74px] bg-black/20 rounded-2xl pl-[27px] text-white' />
+        <form action="" className='flex xsm:flex-wrap sm:flex-row gap-x-5 xsm:gap-4 xsm:mt-[10px]'>
+
+        <input type="text" placeholder='Destination' className=' xsm:w-[90%] sm:w-[45%] md:w-full lg:w-[370px] xsm:h-[45px]  lg:h-[74px] bg-black/20 rounded-2xl pl-[27px] text-white'/>
+
+        <input type="text" placeholder='Email'className=' xsm:w-[90%] xsm:h-[45px] sm:w-[45%] md:w-full lg:w-[370px] lg:h-[74px] bg-black/20 rounded-2xl pl-[27px] text-white' />
         </form>
         
-        <div>
-            <button className='h-[66px] w-[66px] rounded-full bg-[#FF3B00] flex justify-center items-center'>
+        <div className='xsm:mt-[10px]'>
+            <button className='h-[66px] w-[66px] rounded-full bg-[#FF3B00] flex justify-center items-center ml-3'>
                     <CiMail className='text-white text-3xl'/>
             </button>
         </div>

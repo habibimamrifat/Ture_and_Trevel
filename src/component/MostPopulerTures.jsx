@@ -27,7 +27,33 @@ const MostPopulerTures = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 2
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
 
@@ -55,19 +81,22 @@ const MostPopulerTures = () => {
     },
   ];
   return (
-    <div className="w-[1440px]">
-      <div className="mt-[251px] ml-[103px] mr-[100px]">
+    <div className="w-full xsm:mt-[800px] sm:mt-[500px] md:mt-[351px] lg:mt-[200px]">
+      <div className=" lg:ml-[103px] lg:mr-[100px]">
       <div>
       <div>
-        <h1 className="text-5xl font-medium text-black">Most Popular Tours</h1>
+        <h1 className="xsm:ml-[20px] xsm:text-[30px] md:text-5xl font-medium text-black">Most Popular Tours</h1>
       </div>
-      <div className="flex justify-between items-center gap-16">
-        <h6 className="text-xl font-normal text-[#645E5E]">
+      <div className="flex xsm:flex-col  md:flex-row md:justify-between items-center md:gap-16">
+
+        <h6 className="xsm:text-[20px] md:text-xl font-normal text-[#645E5E]">
           Lorem Ipsum is simply dummy text.
         </h6>
 
-        <div className="flex justify-center items-center gap-16 mt-[10px]">
-          <h1 className="text-xl font-normal text-[#645E5E]">View All Tours</h1>
+        <div className="flex xsm:flex-col md:flex-row md:justify-center md:items-center sxm:gap-4 md:gap-16 xsm:mt-3 md:mt-[10px]">
+
+          <h1 className="xsm:text-[20px] md:text-xl font-normal text-[#645E5E]">View All Tours</h1>
+
           <div className=" flex justify-center items-center gap-2">
             <button className="w-[42px] h-[41px] rounded-full bg-[#645E5E]/30 flex justify-center items-center text-white " onClick={previous}>
               <FaArrowLeft />

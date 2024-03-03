@@ -34,18 +34,19 @@ const TopStories = () => {
 
   return (
     <div className="w-full flex justify-center items-center" id="stories">
-      <div className=" mt-[80px] ">
-        <h1 className="text-[48px] font-medium text-black">Top Stories</h1>
-        <div className="flex justify-between mt[10px]">
-          <h1 className="text-[20px] font-normal text-[#645E5E]">
+      <div className=" mt-[80px] xsm:mx-[10px] sm:mx-[20px] ">
+        <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black xsm:mx-[10px] sm:mx-[20px]">Top Stories</h1>
+        <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px] xsm:mx-[10px] sm:mx-[20px]">
+          <h1 className="xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]">
             Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.
           </h1>
-          <button className="text-[20px] font-normal text-[#645E5E]">
+          <button className="xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]">
             
             View All Destinations
           </button>
         </div>
-        <div className="flex justify-center items-center flex-wrap gap-5 mt-[40px]  h-[374px] overflow-hidden">
+
+        <div className="flex justify-center items-center flex-wrap gap-5 mt-[40px]  lg:h-[374px] lg:overflow-hidden">
           {topStoriesDataset.map((topStories, index) => (
             <div className=" h-[374px] w-[267px] relative rounded-[20px] overflow-hidden" key={index}>
               <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center ">

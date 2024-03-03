@@ -44,7 +44,7 @@ const Home = () => {
   }, []); 
 
   return (
-    <div className="overflow-hidden w-full">
+    <div className="overflow-hidden full">
       <Bannar />
       <MostPopulerTures />
       <TopDestination />

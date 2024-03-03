@@ -6,12 +6,12 @@ const MptCard = ({ aboutTure,  }) => {
 
 
   return (
-    <div className="w-[578px] h-[360px] rounded-2xl relative">
+    <div className="xsm:w-full xl:w-[578px] xl:h-[360px] p-3 rounded-2xl relative">
       <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover" />
 
-      <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl">
+      <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl flex flex-col justify-between m-[2%]">
 
-        <div className="flex justify-between mx-[33px] my-[35px]">
+        <div className="flex justify-between xsm:mx-[2%] xsm:my-[2%] xl:mx-[33px] xl:my-[35px] px-4">
           <div className="flex justify-center items-center gap-1">
             <div className="w-[11px] h-[11px] bg-[#FF3B00] rounded-full"></div>
             <h6 className="font-semibold text-base text-white">{aboutTure.location}</h6>
@@ -21,15 +21,17 @@ const MptCard = ({ aboutTure,  }) => {
           </div>
         </div>
 
-        <div className="mt-[104px] w-[347px] h-[78px] ml-[35px]">
-            <h1 className="text-[32px] font-normal text-white">
+        <div className="py-4">
+
+        <div className="w-full xsm:m-[1%] xl:h-[78px] xl:ml-[35px]">
+            <h1 className="text-wrap xsm:text-[20px] xl:text-[32px] font-normal text-white px-4">
               {aboutTure.detail}
             </h1>
         </div>
 
-        <div className="mt-[32px]  ml-[35px] flex justify-around">
+        <div className="xl:mt-[32px]  xl:ml-[35px] flex justify-around xsm:m-[2%]">
 
-          <div className="font-normal text-xl text-white flex items-center gap-1">
+          <div className="font-normal text-sm xl:text-xl text-white flex xsm:flex-col md:flex-row items-center gap-1">
 
           <div className="border-r-[1px] border-white">
             <p className="px-1">{aboutTure.days} <span>days</span></p>
@@ -37,18 +39,18 @@ const MptCard = ({ aboutTure,  }) => {
             <div>
               <p>form $ <span>{aboutTure.totalCosting}</span> </p>
             </div>
-            
-
           </div>
 
           <div>
             <Rating
             retting ={aboutTure.ratting} />
           </div>
+
           <div className="font-normal text-xl text-white flex">
             <p><span>{aboutTure.totalReviews} </span>reviews</p>
           </div>
 
+        </div>
         </div>
 
       </div>

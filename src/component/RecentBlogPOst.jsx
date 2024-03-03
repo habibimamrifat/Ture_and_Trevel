@@ -38,21 +38,24 @@ const RecentBlogPOst = () => {
     },
   ];
   return (
-    <div className="w-full">
-      <div className="mx-[103px] mb-[80px] ">
-        <h1 className="font-medium text-[48px] text-black">
+    
+      <div className="ms-[5%] my-[5%] lg:mb-[80px]">
+
+        <h1 className=" text-black text-[30px] lg:font-medium lg:text-[48px]">
           Recent Blog Posts
         </h1>
-        <h1 className="text-xl font-normal text-[#645E5E]">
+        <h1 className="text-base font-normal text-[#645E5E] lg:text-xl">
           Latin literature from 45 BC, making it over 2000 years old
         </h1>
-        <div className="flex justify-around mt-[41px] max-w-[1440px]">
-          {recentBlogPostDataset.map((blogPost,index) => (
-            <div className="w-[382px]" key={index}>
-              
-              <div className="w-[382px] h-[252px]">
 
-                <div className="relative">
+        <div className="mt-[41px]  gap-3 flex justify-center items-center xsm:flex-col xsm:items-center xsm:justify-center sm:flex-wrap sm:flex-row sm:justify-start lg:flex lg:flex-wrap ">
+
+          {recentBlogPostDataset.map((blogPost,index) => (
+            <div className="xsm:w-[90%] sm:w-[45%] lg:w-[382px]" key={index}>
+              
+              <div className=" w-full h-[252px] rounded-lg overflow-hidden">
+
+                <div className="relative h-full w-full">
                   <img src={blogPost.blogImg} alt="blog Img unaviable" className="w-full h-full object-cover" />
                   <div className="absolute top-[27px] left-[18px] rounded-2xl overflow-hidden  ">
                   <a href={blogPost.buttonNavigatin}>
@@ -65,7 +68,7 @@ const RecentBlogPOst = () => {
                 
               </div>
 
-              <div className="mt-[33px] text-start">
+              <div className="xsm:mt-[5px] lg:mt-[33px] w-full text-start">
                 <div className="flex items-center gap-[15px]">
                   <div className="w-[52px] h-[52px] rounded-full">
                     <img src={blogPost.blogerPicture} alt="" />
@@ -88,7 +91,7 @@ const RecentBlogPOst = () => {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 };
 

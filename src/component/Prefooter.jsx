@@ -9,8 +9,8 @@ import zz from "../assets/img/zz.png"
 const Prefooter = () => {
     
   return (
-    <div>
-      <div className='w-full h-[284px] flex mt-[80px]'>
+    
+      <div className='w-full  flex xsm:h-[100px] sxm:mt-[30px] md:h-[150px] md:mt-[50px] lg:h-[284px] lg:mt-[80px]'>
 
         <div >
             <img src={xy} alt="" className='h-full w-full object-cover' />
@@ -29,7 +29,7 @@ const Prefooter = () => {
         </div>
 
       </div>
-    </div>
+  
   )
 }
 

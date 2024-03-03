@@ -65,18 +65,38 @@ const Review = () => {
         <h1 className=" text-[48px] font-normal text-black text-center">
           What They’re Saying
         </h1>
-        <div className="mt-[53px] mx-[100px] flex justify-center items-center pb-10 ">
+        <div className="mt-[53px] xsm:mx-0 lg:mx-[100px] flex justify-center items-center pb-10 ">
         <Swiper
         pagination={{
           dynamicBullets: true,
-          
+          clickable:true, 
         }}
-        
         modules={[Pagination]}
         loop={true}
         className="mySwiper"
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={5}
+        
+        
+        breakpoints={{
+          450: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView:2,
+            spaceBetween: 5,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1350: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+        
         
       >
             
@@ -92,7 +112,7 @@ const Review = () => {
                     alt=""
                   />
                 </div>
-                <div className="w-[352px] h-[384px] mt-[15px] shadow-xl shadow-[#00000040] ">
+                <div className="xsm:w-[310px] lg:w-[352px] h-[384px] mt-[15px] shadow-xl shadow-[#00000040] ">
                   <div className="flex flex-col justify-center items-center">
                     <div className="mt-[47px]">
                       <Rating retting={review.CustomerReting} />
