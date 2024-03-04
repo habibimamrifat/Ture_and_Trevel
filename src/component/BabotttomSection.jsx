@@ -7,10 +7,11 @@ import { LuUserCheck, LuUserX } from "react-icons/lu";
 
 const BabotttomSection = () => {
   return (
-    <div className="flex justify-center items-center mt-[42px] ">
-      <div className="w-[95%] h-auto xl:w-[1047px] xl:h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500">
+    <div className="flex justify-center items-center mt-[42px] xsm:bg-white xsm:pt-10 sm:bg-transparent sm:pt-0 ">
 
-        <div className=" flex xsm:flex-wrap xsm:justify-around lg:flex-nowrap lg:flex-none lg:flex-row lg:h-[57px] text-xl font-semibold w-full xsm:pt-5 xsm:px-5 lg:pt-0 lg:px-0">
+      <div className="w-[95%] h-auto xl:w-[1047px] xl:h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500 ">
+
+        <div className=" flex xsm:flex-wrap xsm:justify-around lg:flex-nowrap lg:flex-none lg:flex-row lg:h-[57px] text-xl font-semibold w-full xsm:pt-5 xsm:px-5 lg:pt-0 lg:px-0 bg-white">
 
           <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
             Hotel

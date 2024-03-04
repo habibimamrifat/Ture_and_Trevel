@@ -4,6 +4,8 @@ import { FaAngleDown } from "react-icons/fa";
 import SignUpPage from "./SignUpPageFinal";
 import SignIn from "./SignInFinal";
 import ForgetPassword from "./ForgetPassword";
+import { FaSignInAlt } from "react-icons/fa";
+import { GiArchiveRegister } from "react-icons/gi";
 
 const BaMiniMenu = () => {
   let [setCountry, viewCuntryOption] = useState(false);
@@ -81,13 +83,13 @@ const BaMiniMenu = () => {
  }
 
   return (
-    <div className="pt-[83Px] flex justify-between items-center ">
-      <div className="text-white font-bold text-base flex justify-center items-center pl-[315px]">
-        <div className="mr-[21px]">
+    <div className=" xsm:pt-[25px] lg:pt-[83Px] flex justify-between items-center ">
+      <div className="text-white xsm:font-normal lg:font-bold text-base flex justify-center items-center xsm:pl-[20px] sm:pl-[150px] md:pl-[200px] lg:pl-[315px]">
+        <div className="xsm:mr-[5px] lg:mr-[21px]">
           <h1>Support</h1>
         </div>
 
-        <div className="flex  mr-[25px]">
+        <div className="flex  xsm:mr-[5px] lg:mr-[25px]">
           <select
             name=""
             id=""
@@ -109,7 +111,7 @@ const BaMiniMenu = () => {
         <div className="relative">
           <div className="flex justify-center items-center gap-2">
             <div
-              className="flex justify-center items-center gap-5"
+              className="flex justify-center items-center xsm:gap-1 lg:gap-5 "
               onClick={() => viewCuntryOption(!setCountry)}
             >
               <div className="h-14px w-15px rounded-full">
@@ -129,7 +131,7 @@ const BaMiniMenu = () => {
           <div
             className={`${
               setCountry
-                ? "block  text-black absolute right-1 top-5 h-[73px] w-[90px] bg-white rounded-md"
+                ? "block  text-black absolute right-1 top-5 h-[73px] w-[90px] bg-white rounded-md z-10"
                 : "hidden"
             }`}
           >
@@ -156,15 +158,19 @@ const BaMiniMenu = () => {
         </div>
       </div>
 
-      <div className="text-white font-bold text-base flex gap-1 pr-[108px]">
+      <div className="text-white xsm:font-normal lg:font-bold text-base flex gap-1 xsm:pr-[20px] sm:pr-[150px] md:pr-[200px] lg:pr-[108px]">
+
         <button onClick={() => setSignupPeramiter("Signup")}>
-          <h1>Sign Up</h1>
+          
+            <h1 className="xsm:hidden md:block">Sign Up</h1>
+            <GiArchiveRegister className="xsm:block md:hidden" />
         </button>
 
         <h1>/</h1>
 
         <button onClick={() => setSignupPeramiter("Signin")}>
-          <h1>Sign In</h1>
+          <h1 className="xsm:hidden md:block">Sign In</h1>
+          <FaSignInAlt className="xsm:block md:hidden" />
         </button>
 
         <div className={`absolute bg-white ease-in-out  ${ isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ? ' top-0 right-0 ' : 'delay-500 -top-[99999px] -right-[99999px]' } `}>
@@ -172,7 +178,7 @@ const BaMiniMenu = () => {
 
           <div
             className={`bg-white absolute right-0 shadow-md shadow-gray-400 z-[100] transition-min-height transition-min-w duration-1000 ${
-              isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ? "min-h-[964px] min-w-[550px] " : "min-w-0 min-h-0"
+              isSignupClosed === 'Signup' || isSignupClosed === "Signin" || isSignupClosed === "Forgetpassword" ? "xsm:min-w-[100vw] sm:min-w-[70vw] md:min-w-[60vw] min-h-max xl:min-h-[964px] xl:min-w-[550px] " : "min-w-0 min-h-0"
             }`}
           >
 
@@ -195,6 +201,7 @@ const BaMiniMenu = () => {
 
         </div>
       </div>
+
     </div>
   );
 };

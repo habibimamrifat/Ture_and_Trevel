@@ -81,7 +81,7 @@ const MostPopulerTures = () => {
     },
   ];
   return (
-    <div className="w-full xsm:mt-[800px] sm:mt-[500px] md:mt-[351px] lg:mt-[200px]">
+    <div className="w-full xsm:mt-[650px] sm:mt-[600px] md:mt-[350px] lg:mt-[400px] xl:mt-[450px]">
       <div className=" lg:ml-[103px] lg:mr-[100px]">
       <div>
       <div>

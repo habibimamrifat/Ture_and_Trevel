@@ -57,7 +57,7 @@ const Home = () => {
       <Footer />
 
       <a href="#bannar" className={`${isVisible ? `block` : `hidden`}`} >
-        <div className="fixed top-[50%] right-[100px] w-[50px] h-[50px] rounded-full bg-black/20 flex justify-center items-center">
+        <div className="fixed  top-[50%] xsm:right-1 lg:right-[25px] lg:w-[50px] h-[50px] rounded-full bg-black/20 flex justify-center items-center">
           <FaArrowUp className="text-white text-3xl font-semibold" />
         </div>
       </a>

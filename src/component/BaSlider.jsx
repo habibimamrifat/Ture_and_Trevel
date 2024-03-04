@@ -51,8 +51,8 @@ const BaSlider = () => {
   //   carusol coding ends
   
   return (
-    <div className="relative h-screen ">
-      <div className="slider-container h-full w-full " >
+    <div className="relative h-screen w-full ">
+      <div className="slider-container h-full w-full xsm:hidden sm:block" >
         <Slider
         
           ref={(slider) => {
@@ -60,22 +60,22 @@ const BaSlider = () => {
           }}
           {...settings}
         
-      
+      className="-ml-3 h-[100vh]"
         >
-          <div key={1}>
-            <img src={causolBg} alt="not found" className="object-contain h-full w-full bg-amber-300" />
+          <div key={1} className="h-full">
+            <img src={causolBg} alt="not found" className="object-cover bg-amber-300" />
           </div>
-          <div key={2}>
-            <img src={causolBg} alt="not found" className="object-cover h-full w-full bg-amber-300" />
+          <div key={2} className="h-full">
+            <img src={causolBg} alt="not found" className="object-cover h-full bg-amber-300" />
           </div>
-          <div key={3}>
-            <img src={causolBg} alt="not found" className="object-cover h-full w-full bg-amber-300" />
+          <div key={3} className="h-full">
+            <img src={causolBg} alt="not found" className="object-cover bg-amber-300" />
           </div>
         </Slider>
 
       </div>
 
-      <div className="absolute top-0 bottom-0 left-0 right-0">
+      <div className=" top-0 bottom-0 left-0 right-0 xsm:relative xsm:bg-black sm:absolute sm:bg-transparent">
         <BaMiniMenu />
         <BaNavbar />
         <BaCountry />
@@ -85,6 +85,7 @@ const BaSlider = () => {
         />
         <BabotttomSection/>
       </div>
+      
     </div>
   );
 };

@@ -2,26 +2,31 @@ import React from "react";
 
 const BaCountry = () => {
   return (
-    <div className="text-white flex justify-between items-center mt-[93px] ">
-      <div className="ml-[110px]">
-            <div className="w-[312px] h-[113px] relative ">
+    <div className="text-white flex justify-between items-center xsm:mt-[10px] xl:mt-[93px]  xsm:mx-[4%]">
+
+      <div className="sxm:ml-[50px] xl:ml-[110px]">
+
+            <div className="xsm:w-[200px] xsm:h-[50px] xl:w-[312px] xl:h-[113px] 
+            xsm:ml-[10px] relative">
 
                 <div className="flex justify-center items-center absolute right-0">
                     <div className="w-[11px] h-[11px] bg-[#FF3B00] rounded-full"></div>
-                    <h6 className="font-semibold text-base">United State of America</h6>
+                    <h6 className="xsm:font-normal xsm:text-[10px] xl:font-semibold xl:text-base">United State of America</h6>
                 </div>
 
-                <h1 className="font-normal text-8xl">Arizona</h1>
+                <h1 className="xsm:font-normal xsm:text-[30px] xl:font-normal xl:text-8xl">Arizona</h1>
             </div>
-            <p className="font-normal text-base w-[313px]  h-[38px]">
+
+            <p className="xsm:font-light xsm:ml-[10px] xl:font-normal xl:text-base xl:w-[313px]  xl:h-[38px] xsm:w-[150px] xsm:h-[100px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
             </p>
       </div>
 
-      <div className="mr-[78px]">
-        <h1 className="font-normal text-[64px]">Asia</h1>
+      <div className="xsm:mr-[10px] xl:mr-[78px]">
+        <h1 className="xsm:text-[30px] xl:font-normal xl:text-[64px]">Asia</h1>
       </div>
+      
     </div>
   );
 };
