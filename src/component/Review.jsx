@@ -95,6 +95,10 @@ const Review = () => {
             slidesPerView: 3,
             spaceBetween: 20,
           },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
         }}
         
         

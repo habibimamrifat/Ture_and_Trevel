@@ -21,30 +21,33 @@ const TpBannarSection = () => {
 
   const topPakegeImg = [due, grass, bluewave, due, grass, bluewave];
   return (
-    <div className="mt-[32px] ms-[32px] me-8" id='Photograpgs'>
-      <h1 className="font-bold text-xl text-white">
+    <div className="xsm:mt-[30px] xsm:ms-[10px] xsm:me-4 lg:mt-[32px] lg:ms-[32px] lg:me-8" id='Photograpgs'>
+      <h1 className=" lg:text-xl xsm:font-normal xsm:text-[30px] sm:font-bold sm:text-lg text-white">
         Home / Node / A trip to the mighty desert
       </h1>
 
-      <div className="flex gap-[17px] items-center mt-[26px] ms-[40px] ">
+      <div className="flex gap-[17px] items-center mt-[26px] xsm:ms-[10px] lg:ms-[40px] ">
         <div className="h-[11px] w-[11px] rounded-full bg-[#FF3B00]"></div>
-        <h2 className="font-bold text-xl text-white">North Africa</h2>
+        <h2 className="sm:font-bold lg:text-xl xsm:font-normal xsm:text-[20px] text-white">North Africa</h2>
       </div>
 
-      <div className="flex justify-between items-center mt-[32px] text-white">
-        <h1 className="font-medium text-[48px]">A trip to the mighty desert</h1>
-        <div className="flex justify-between items-center gap-5">
-          <div className="h-[46px] w-[46px] rounded-full bg-white flex justify-center items-center">
+      <div className="flex xsm:flex-col  sm:flex-row justify-between items-center mt-[32px] text-white">
+        <h1 className="sm:font-medium xl:text-[48px] xsm:text-[30px] xsm:font-normal">A trip to the mighty desert</h1>
+
+        <div className="flex justify-between items-center gap-5 xsm:mt-[15px]">
+
+          <div className="xsm:h-[30px] xsm:w-[30px] lg:h-[46px] lg:w-[46px] rounded-full bg-white flex justify-center items-center">
             <FaBookmark className="text-xl text-[#FF3B00]" />
           </div>
+
           <button
-            className="h-[46px] w-[46px] rounded-full bg-[#C2B9B9] flex justify-center items-center"
+            className="xsm:h-[30px] xsm:w-[30px] lg:h-[46px] lg:w-[46px] rounded-full bg-[#C2B9B9] flex justify-center items-center"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <FaArrowLeft className="text-xl text-white" />
           </button>
           <button
-            className="h-[46px] w-[46px] rounded-full bg-[#C2B9B9] flex justify-center items-center"
+            className="xsm:h-[30px] xsm:w-[30px] lg:h-[46px] lg:w-[46px] rounded-full bg-[#C2B9B9] flex justify-center items-center"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <FaArrowRightLong className="text-xl text-white" />
@@ -54,13 +57,35 @@ const TpBannarSection = () => {
 
       <div className="mt-[71px] mx-[32px] h-[360px]">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={5}
           loop={true}
          
           className="mySwiper"
           onBeforeInit={(swiper)=>{
             swiperRef.current = swiper;
+          }}
+          breakpoints={{
+            450: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView:2,
+              spaceBetween: 5,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1350: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1440: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
           }}
           
         >

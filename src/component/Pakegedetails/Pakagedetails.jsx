@@ -22,7 +22,6 @@ import Location from "./Location";
 import TopStories from "../TopStories"
 import PakageReview from "./PakageReview";
 import Footer from "../Footer"
-import FootrtBottom from "../FooterBottom"
 import Prefooter from "../Prefooter";
 import SideNavBar from "./SideNavBar";
 
@@ -37,26 +36,26 @@ const Pakagedetails = () => {
 
   return (
     
-    <div>
+    <div className="w-[100vw]">
 
       <div className="w-full h-[1304px] bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${bannerBg})`}}>
         <BaMiniMenu/>
         <BaNavbar/>
         <TpBannarSection/>
-        <TpBannaeBottomSEction />  
+        {/* <TpBannaeBottomSEction />   */}
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-12 gap-4">
 
-      <div className="ml-[37px] col-span-3">
+      {/* <div className="ml-[37px] col-span-9">
       <OverView/>
       <TopPakegeInclucated/>
       <Location/>
       <TopStories/>
       <PakageReview />
-      </div>
+      </div> */}
 
-      <div className="col-span-1 mt-[15px] mr-[30px]">
+      <div className="col-span-4 mt-[15px] mr-[30px]">
         <SideNavBar/>
       </div>
 
