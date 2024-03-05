@@ -4,9 +4,10 @@ import Rating from "../Rating"
 const TpBannaeBottomSEction = () => {
   return (
     <div className='flex justify-center'>
-      <div className='mt-[118px] text-white flex'>
 
-        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center border-r-2 border-white'>
+      <div className='xsm:mt-[10px] lg:mt-[40px] xl:mt-[118px] text-white flex xsm:flex-col sm:flex-row sm:justify-center sm:flex-wrap xl:flex-nowrap pb-10'>
+
+        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center xsm:border-b-2 md:border-b-0 md:border-r-2 border-white'>
             <h1 className='font-normal text-[20px] text-center'>Check In</h1>
             <div className='flex justify-center items-center h-[77px] w-[138px] mt-[23px] gap-3'>
                 <h1 className='font-normal text-[64px]'>8</h1>
@@ -14,7 +15,7 @@ const TpBannaeBottomSEction = () => {
                 2022</p>
             </div>
         </div>
-        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center border-r-2 border-white'>
+        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center xsm:border-b-2 md:border-b-0 md:border-r-2 border-white'>
             <h1 className='font-normal text-[20px] text-center'>Check Out</h1>
             <div className='flex justify-center items-center h-[77px] w-[138px] mt-[23px] gap-3'>
                 <h1 className='font-normal text-[64px]'>8</h1>
@@ -22,7 +23,7 @@ const TpBannaeBottomSEction = () => {
                 2022</p>
             </div>
         </div>
-        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center border-r-2 border-white'>
+        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center xsm:border-b-2 md:border-b-0 md:border-r-2 border-white'>
             <h1 className='font-normal text-[20px] text-center'>Adult</h1>
             <div className='flex justify-center items-center h-[77px] w-[138px] mt-[23px] gap-3'>
                 <div className='font-normal text-[16opx] pr-4'> <h1>+</h1> <h1>-</h1>
@@ -31,7 +32,7 @@ const TpBannaeBottomSEction = () => {
                 
             </div>
         </div>
-        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center border-r-2 border-white'>
+        <div className='w-[270px] h-[211px] flex flex-col justify-center items-center xsm:border-b-2 md:border-b-0 md:border-r-2 border-white'>
             <h1 className='font-normal text-[20px] text-center'>Children</h1>
             <div className='flex justify-center items-center h-[77px] w-[138px] mt-[23px] gap-3'>
                 <div className='font-normal text-[16opx] pr-4'> <h1>+</h1> <h1>-</h1>
@@ -55,6 +56,7 @@ const TpBannaeBottomSEction = () => {
             </div>
         </div>
       </div>
+
     </div>
   )
 }

@@ -38,26 +38,26 @@ const Pakagedetails = () => {
     
     <div className="w-[100vw]">
 
-      <div className="w-full h-[1304px] bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${bannerBg})`}}>
+      <div className="w-full h-auto bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${bannerBg})`}}>
         <BaMiniMenu/>
         <BaNavbar/>
         <TpBannarSection/>
-        {/* <TpBannaeBottomSEction />   */}
+        <TpBannaeBottomSEction />  
       </div>
 
-      <div className="grid grid-cols-12 gap-4">
+      <div className="w-full md:grid md:grid-cols-12 md:gap-4">
 
-      {/* <div className="ml-[37px] col-span-9">
-      <OverView/>
-      <TopPakegeInclucated/>
-      <Location/>
-      <TopStories/>
-      <PakageReview />
-      </div> */}
+        <div className="xl:ml-[37px] md:col-span-9">
+        <OverView/>
+        <TopPakegeInclucated/>
+        <Location/>
+        <TopStories/>
+        <PakageReview />
+        </div>
 
-      <div className="col-span-4 mt-[15px] mr-[30px]">
-        <SideNavBar/>
-      </div>
+        <div className="md:col-span-3 mt-[15px] xl:mr-[30px]">
+          <SideNavBar/>
+        </div>
 
       </div>
 
