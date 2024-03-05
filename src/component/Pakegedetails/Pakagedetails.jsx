@@ -36,7 +36,7 @@ const Pakagedetails = () => {
 
   return (
     
-    <div className="w-[100vw]">
+    <div className="w-[100%]">
 
       <div className="w-full h-auto bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${bannerBg})`}}>
         <BaMiniMenu/>
@@ -45,7 +45,7 @@ const Pakagedetails = () => {
         <TpBannaeBottomSEction />  
       </div>
 
-      <div className="w-full md:grid md:grid-cols-12 md:gap-4">
+      <div className="w-full md:grid md:grid-cols-12 gap-4">
 
         <div className="xl:ml-[37px] md:col-span-9">
         <OverView/>

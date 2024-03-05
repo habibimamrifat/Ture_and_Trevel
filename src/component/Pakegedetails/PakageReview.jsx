@@ -3,7 +3,7 @@ import person from "../../assets/img/Ellipse 56.png";
 import Ratting from "../Rating";
 const PakageReview = () => {
   return (
-    <div className="mt-[60px] mb-[95px]" id='reviews'>
+    <div className="xsm:ml-[10px] xsm:mr-[10px] xsm:mt-[45px] xsm:mb-[70px] md:mt-[60px] md:mb-[95px]" id='reviews'>
 
       <div>
         <div className="flex gap-5 items-center">
@@ -53,7 +53,7 @@ const PakageReview = () => {
       </div>
 
       <div className="w-full h-auto pb-5 bg-[#F1EAEA] mt-[36px]">
-        <div className="mx-[56px]">
+        <div className="xsm:mx-[10px] lg:mx-[56px]">
           <div className="flex xsm:flex-col xsm:gap-3 lg:flex-row lg:justify-between pt-[45px]">
             <h1 className="text-[20px] font-normal text-black">
               Write A Review
@@ -66,8 +66,8 @@ const PakageReview = () => {
           </div>
 
           <div className="flex xsm:flex-col xsm:gap-3 lg:flex-row lg:justify-between mt-[42px]">
-            <input type="text" placeholder="Your Name"  className="bg-white p-5 rounded-md xsm:w-[90%] lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
-            <input type="text" placeholder="Your Email"  className="bg-white p-5 rounded-md xsm:w-[90%] lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
+            <input type="text" placeholder="Your Name"  className="bg-white p-5 rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
+            <input type="text" placeholder="Your Email"  className="bg-white p-5 rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
             
           </div>
 
@@ -76,10 +76,10 @@ const PakageReview = () => {
           </div>
 
           <div className="flex justify-between items-center mt-[28px]">
-            <button className="w-[230px] h-[62px] rounded-[10px] bg-[#2E2E2F] text-white text-[20px] font-normal">
+            <button className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#2E2E2F] text-white xsm:text-[15px] lg:text-[20px] font-normal">
             + Add a new file
             </button>
-            <button className="w-[230px] h-[62px] rounded-[10px] bg-[#FF3B00] text-white text-[20px] font-normal">
+            <button className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#FF3B00] text-white xsm:text-[15px] lg:text-[20px] font-normal">
             Send
             </button>
           </div>

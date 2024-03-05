@@ -3,10 +3,10 @@ import Accordian from "./Accordian";
 
 const OverView = () => {
   return (
-    <div  id="overView">
-      <div className="mt-[113px]">
-        <h1 className="font-semibold text-[48px] text-black">Overview</h1>
-        <p className="mt-[45px] text-[20px] font-normal">
+    <div className="xsm:ml-3 xsm:mr-3"  id="overView">
+      <div className="xsm:mt-[50px] md:mt-[80px] lg:mt-[113px]">
+        <h1 className="xsm:font-normal xsm:text-[30px] lg:font-semibold lg:text-[48px] text-black">Overview</h1>
+        <p className="xsm:text-[15px] mt-[45px] lg:text-[20px] font-normal">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was and I will give you a complete account
           of the system, and expound the actual teachings of the great explorer

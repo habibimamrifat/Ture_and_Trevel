@@ -84,13 +84,13 @@ const Accordian = () => {
  <hr />
           <div
             className={`w-full overflow-hidden transition-max-height duration-1000 ease-in-out ${
-              isAccordianClosed === accordian.id ? "max-h-[585px]" : " max-h-0"
+              isAccordianClosed === accordian.id ? "max-h-[1000px]" : " max-h-0"
             }`}
           >
             <div className="mt-[15px]">
              {accordian.accordianContent}
             </div>
-            <div className="mt-[45px] w-full flex justify-between items-center">
+            <div className="mt-[45px] w-full flex xsm:flex-wrap lg:flex-nowrap justify-around items-center">
               {
                 accordian.imges.map((accordianImg)=>(
                   <img src={accordianImg} alt="" srcset="" className="w-[260px]" />

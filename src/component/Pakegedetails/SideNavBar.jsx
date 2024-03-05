@@ -131,19 +131,19 @@ const SideNavBar = () => {
         </div>
       </div>
 
-      {/* <div className="w-full rounded-[10px] overflow-hidden mt-[15px]">
-        <button className="w-full h-[127px] bg-[#FF3B00] text-white ">
-          <h1 className="text-[24px] font-bold">Book Now</h1>
-            <h1 className="text-[32px] font-bold">From $500</h1>
+      <div className="xsm:hidden  md:block w-full rounded-[10px] overflow-hidden mt-[15px]">
+        <button className="w-full xsm:h-[60px] lg:h-[127px] bg-[#FF3B00] text-white ">
+          <h1 className="xsm:text-[15px] lg:text-[24px] font-bold">Book Now</h1>
+            <h1 className="xsm:text-[20px] lg:text-[32px] font-bold">From $500</h1>
         </button>
       </div>
 
-      <div className="flex items-center gap-2 mt-[15px]">
-        <div className="w-[61px] h-[61px] rounded-full flex justify-center items-center shadow-md shadow-[#645E5E]">
+      <div className="xsm:hidden  md:flex items-center gap-2 mt-[15px]">
+        <div className="xsm:w-[30px] xsm:h-[30px] lg:w-[61px] lg:h-[61px] rounded-full flex justify-center items-center shadow-md shadow-[#645E5E]">
         <FaBookmark className="text-[#FF3B00]" />
         </div>
-        <h1 className="text-[25px] font-normal text-[#645E5E]">Add to favourites</h1>
-      </div> */}
+        <h1 className="xsm;text-[15px] lg:text-[25px] font-normal text-[#645E5E]">Add to favourites</h1>
+      </div>
 
     </div>
   );
