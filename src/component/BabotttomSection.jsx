@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa6";
 
 import { LuUserCheck, LuUserX } from "react-icons/lu";
 
+import { SlOptionsVertical } from "react-icons/sl";
+import { RxCrossCircled } from "react-icons/rx";
+
 
 const BabotttomSection = () => {
+  const [toggle, setToggleValue] = useState(false);
+  
   return (
     <div className="flex justify-center items-center mt-[42px] xsm:bg-white xsm:pt-10 sm:bg-transparent sm:pt-0 ">
 
-      <div className="w-[95%] h-auto xl:w-[1047px] xl:h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500 ">
+      <div className="w-[95%] h-auto xl:w-[1047px] xl:h-[225px]  rounded-3xl overflow-hidden shadow-md shadow-slate-500 bg-white">
 
-        <div className=" flex xsm:flex-wrap xsm:justify-around lg:flex-nowrap lg:flex-none lg:flex-row lg:h-[57px] text-xl font-semibold w-full xsm:pt-5 xsm:px-5 lg:pt-0 lg:px-0 bg-white">
+        {/* <div className=" flex xsm:flex-wrap xsm:justify-around lg:flex-nowrap lg:flex-none lg:flex-row lg:h-[57px] text-xl font-semibold w-full xsm:pt-5 xsm:px-5 lg:pt-0 lg:px-0 bg-white">
 
           <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
             Hotel
@@ -36,12 +41,91 @@ const BabotttomSection = () => {
           <button className="xsm:w-[100px] lg:w-[175px] lg:h-[57px] text-[#FF3B00] bg-white hover:bg-[#FF3B00] hover:text-white border-[1px] border-gray-400">
           Holiday
           </button>
-        </div>
+        </div> */}
+
+
+          {/* ..............................  */}
+
+
+
+          <div className="relative">
+            <div
+              className={` xsm:absolute sm:hidden ${
+                toggle
+                  ? "xsm:top-[99999px] xsm:left-[99999px]"
+                  : "xsm:top-5 xsm:left-5"
+              }`}
+              onClick={() => setToggleValue(!toggle)}
+            >
+              <SlOptionsVertical className="text-[20px]" />
+            </div>
+            {/* ..........buttton to open ...  */}
+            <div
+              className={`xsm:absolute  sm:h-[45px] w-[100%] sm:relative sm:flex sm:justify-center ${
+                toggle
+                  ? "flex flex-col z-10 rounded-xl bg-white shadow-md sm:flex-row "
+                  : "xsm:top-[99999px] xsm:left-[99999px] sm:top-0 sm:left-0 "
+              }`}
+            >
+              {/* ........... button to open.... */}
+
+
+              <div
+                className={` xsm:absolute sm:hidden ${
+                  toggle
+                    ? "xsm:top-5 xsm:right-5 "
+                    : "xsm:top-[99999px] xsm:left-[99999px]"
+                }`}
+                onClick={() => setToggleValue(!toggle)}
+              >
+                <RxCrossCircled className="text-[20px]" />
+              </div>
+
+
+              {/* ......the button to close....  */}
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Hotel
+                </h1>
+              </div>
+              {/* ...........the button to close     */}
+
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Flights
+                </h1>
+              </div>
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Cars
+                </h1>
+              </div>
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Packages
+                </h1>
+              </div>
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Cruise
+                </h1>
+              </div>
+              <div className="border-[1px] border-black/20 flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                  Holiday
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          {/* ...........................................  */}
+
+
         {/* upper part section  */}
 
 
 
-        <div className="flex  justify-around items-center xsm:p-10 xsm:flex-col lg:flex-row h-auto lg:h-[169px] w-full bg-white">
+        <div className={`flex  justify-around items-center xsm:p-10 xsm:flex-col lg:flex-row h-auto lg:h-[169px] w-full bg-white ${toggle ? "xsm:mt-[200px] sm:mt-[50px]":'xsm:mt-[50px] sm:mt-[50px]'}`}>
 
           <div className="text-start">
             
