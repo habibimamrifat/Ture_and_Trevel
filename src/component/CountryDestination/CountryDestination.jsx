@@ -9,7 +9,7 @@ const CountryDestination = () => {
   return (
     <div>
         <CDBanner/>
-        {/* <div className='ml-[80px] mr-[80px]'>
+        <div className='xsm:ml-[10px] xsm:mr-[10px] xl:ml-[80px] xl:mr-[80px]'>
             <div className='mt-[132px]'>
             <NewsLetter />
             </div>
@@ -21,7 +21,7 @@ const CountryDestination = () => {
         <div className='mt-[56px]'>
             <PreFooter/>
             <Footer />
-        </div> */}
+        </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import BaMiniMenu from '../BaMiniMenu'
 
 const DashBoardNavBar = () => {
   return (
-    <div className='w-full h-[344px]' style={{backgroundImage:`url(${dashNav})`}}>
+    <div className='w-full xsm:h-auto xsm:pb-5 xl:h-[344px]' style={{backgroundImage:`url(${dashNav})`}}>
       <BaMiniMenu/>
       <BaNavbar/>
     </div>

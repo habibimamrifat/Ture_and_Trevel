@@ -32,8 +32,9 @@ const WishList = () => {
           {
         wishListDataSet.map((wishList, index)=>(
           <div className="w-full bordr-[1px] shadow-md shadow-[#d2d2d2] rounded-md" key={index}>
-            <div className="grid grid-cols-12 gap-[50px] p-12">
-              <div className="col-span-4">
+            <div className="xsm:flex xsm:flex-col md:grid md:grid-cols-12 md:gap-[50px] p-12">
+              
+              <div className="md:col-span-5 lg:col-span-4 rounded-xl overflow-hidden">
                 <img
                   src={wishList.destinationImg}
                   alt=""
@@ -41,7 +42,7 @@ const WishList = () => {
                 />
               </div>
 
-              <div className="col-span-8 relative">
+              <div className="md:col-span-7 lg:col-span-8 md:relative">
                 <h1 className="font-bold text-[32px] text-[#FF3B00] mb-[35px]">
                 {wishList.destinationName}
                 </h1>
@@ -56,7 +57,7 @@ const WishList = () => {
                   Order Total : {wishList.totalOrder}
                 </p>
 
-                <div className="flex gap-5 absolute right-0 bottom-6">
+                <div className="flex gap-5 md:absolute md:right-0 md:bottom-2">
                   <button className="w-[138px] h-[45px] rounded-[10px] border-[1px] text-[16px] font-normal flex justify-center items-center text-[#200D98] border-[#200D98]">
                   Book Now
                   </button>

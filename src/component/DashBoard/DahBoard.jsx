@@ -15,13 +15,16 @@ const DahBoard = () => {
       <RouteView/>
       <MainBoard/>
 
-      <div className='ml-[100px] mr-[100px] h-full mb-[62px]'>
+      <div className='xsm:ml-[10px] xsm:mr-[10px] xl:ml-[100px] xl:mr-[100px] h-full mb-[62px]'>
       <Outlet/>
       </div>
+
       <Newsteller/>
-      <div className='ml-[80px] mr-[80px]'>
+
+      <div className='xsm:ml-[10px] xsm:xsm-[10px] :ml-[80px] xl:mr-[80px]'>
       <CDCatagoryDiscripto/>
       </div>
+
       <Prefooter/>
       <Footer/>
       

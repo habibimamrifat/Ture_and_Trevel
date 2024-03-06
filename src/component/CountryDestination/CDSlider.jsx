@@ -238,25 +238,26 @@ const CDSlider = () => {
   console.log(sliderArray);
 
   return (
-    <div className='h-auto w-[100%] mt-[120px] '>
+    <div className='h-auto w-[100%] xl:mt-[120px] xsm:mt-[50px] '>
        <Swiper
         pagination={pagination}
         modules={[Pagination]}
+        loop={1}
         className="mySwiper "
       >
         {sliderArray.map((slide) => (
           <SwiperSlide key={slide}>
-            <div className='h-full w-full grid grid-rows-12 px-[100px] pb-8'>
+            <div className='h-full w-full grid grid-rows-12 xsm:px-[15px] xl:px-[100px] pb-8'>
 
               <div className=' row-span-4 w-full h-[190px] my-[15px] grid grid-cols-12'>
 
-                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden xsm:hidden lg:flex'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8]} />
                 </div>
-                <div className='col-span-6 m-2 h-full rounded-lg overflow-hidden'>
+                <div className='xsm:col-span-12 lg:col-span-6 m-2 h-full rounded-lg overflow-hidden'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 1]} />
                 </div>
-                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden xsm:hidden lg:flex'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 2]} />
                 </div>
 
@@ -264,25 +265,29 @@ const CDSlider = () => {
 
 
               <div className=' row-span-4 w-full h-[190px] my-[5px] grid grid-cols-12'>
-                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+
+                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden xsm:hidden sm:flex'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 3]} />
                 </div>
-                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+                <div className='xsm:col-span-12 sm:col-span-6  m-2 h-full rounded-lg overflow-hidden'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 4]} />
                 </div>
+
               </div>
 
 
               <div className=' row-span-4 w-full h-[190px] my-[5px] grid grid-cols-12'>
-                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden xsm:hidden lg:flex'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 5]} />
                 </div>
-                <div className='col-span-6  m-2 h-full rounded-lg overflow-hidden'>
+                <div className='xsm:col-span-12 lg:col-span-6  m-2 h-full rounded-lg overflow-hidden'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 6]} />
                 </div>
-                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden'>
+                <div className='col-span-3  m-2 h-full rounded-lg overflow-hidden xsm:hidden lg:flex'>
                 <CDCard aboutTure={MostPopulerTureDataSet[(slide - 1) * 8 + 7]} />
                 </div>
+
               </div>
             </div>
           </SwiperSlide>

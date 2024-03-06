@@ -10,13 +10,13 @@ import { BiSolidCheckbox } from "react-icons/bi";
 
 const DashBoardPreview = () => {
   return (
-    <div className='w-full mt-[67px]'>
+    <div className='w-full xsm:mt-[45px] lg:mt-[67px]'>
 
-     <div className=' grid grid-cols-12 gap-16'>
+     <div className=' lg:grid lg:grid-cols-12 lg:gap-16'>
       
-        <div className='col-span-3'>
+        <div className='xsm:flex xsm:justify-around xsm:flex-wrap lg:block  lg:col-span-3'>
 
-            <div className='w-full h-[210px] flex justify-center items-center border-[1px] border-black'>
+            <div className='xsm:w-full sm:flex-1 lg:w-full h-[210px] flex justify-center items-center border-[1px] border-black'>
                 <div className='flex flex-col'>
                     <img src={GearPic} alt="" />
                     <div className='flex items-center mt-3 gap-2'>
@@ -26,7 +26,7 @@ const DashBoardPreview = () => {
                 </div>
             </div>
 
-            <div className='w-full h-[210px] flex justify-center items-center border-[1px] border-black mt-[42px]'>
+            <div className='xsm:w-full sm:flex-1 lg:w-full h-[210px] flex justify-center items-center border-[1px] border-black lg:mt-[42px]'>
                 <div className='flex flex-col'>
                     <img src={Glob} alt="" />
                     <div className='flex items-center mt-3 gap-2'>
@@ -35,7 +35,7 @@ const DashBoardPreview = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-full h-[210px] flex justify-center items-center border-[1px] border-black mt-[42px]'>
+            <div className='xsm:w-full sm:flex-1 lg:w-full h-[210px] flex justify-center items-center border-[1px] border-black lg:mt-[42px]'>
                 <div className='flex flex-col'>
                     <img src={Building} alt="" />
                     <div className='flex items-center mt-3 gap-2'>
@@ -44,7 +44,7 @@ const DashBoardPreview = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-full h-[210px] flex justify-center items-center border-[1px] border-black mt-[42px]'>
+            <div className='xsm:w-full sm:flex-1 lg:w-full h-[210px] flex justify-center items-center border-[1px] border-black lg:mt-[42px]'>
                 <div className='flex flex-col'>
                     <img src={Plane} alt="" />
                     <div className='flex items-center mt-3 gap-2'>
@@ -56,7 +56,7 @@ const DashBoardPreview = () => {
             
         </div>
 
-        <div className='col-span-9'>
+        <div className='lg:col-span-9'>
 
             <div>
             <div className='h-[115px] w-full shadow-sm shadow-[#645E5E] flex items-center'>
