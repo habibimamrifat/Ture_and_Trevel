@@ -26,7 +26,7 @@ const WishList = () => {
     <div>
       <div>
         <u className="text-[#FF3B00]">
-          <h1 className="text-[48px] text-black font-normal">Your Wish List</h1>
+          <h1 className="xsm:text-[30px] lg:text-[48px] font-bold text-black">Your Wish List</h1>
         </u>
         <div className="mt-[15px] flex flex-col gap-10">
           {

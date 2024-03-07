@@ -34,9 +34,9 @@ const TopStories = () => {
 
   return (
     <div className="w-full flex justify-center items-center" id="stories">
-      <div className=" mt-[80px] xsm:mx-[10px] sm:mx-[20px] ">
-        <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black xsm:mx-[10px] sm:mx-[20px]">Top Stories</h1>
-        <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px] xsm:mx-[10px] sm:mx-[20px]">
+      <div className=" mt-[80px] ">
+        <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black">Top Stories</h1>
+        <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px]">
           <h1 className="xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]">
             Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text.
           </h1>

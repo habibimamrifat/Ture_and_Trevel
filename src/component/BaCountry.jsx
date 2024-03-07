@@ -1,7 +1,9 @@
 import React from "react";
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 const BaCountry = () => {
   return (
+    <SectionWrapper>
     <div className="text-white flex justify-between items-center xsm:mt-[10px] xl:mt-[93px]  xsm:mx-[4%]">
 
       <div className="sxm:ml-[50px] xl:ml-[110px]">
@@ -28,6 +30,7 @@ const BaCountry = () => {
       </div>
       
     </div>
+    </SectionWrapper>
   );
 };
 

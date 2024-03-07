@@ -6,6 +6,8 @@ import SignIn from "./SignInFinal";
 import ForgetPassword from "./ForgetPassword";
 import { FaSignInAlt } from "react-icons/fa";
 import { GiArchiveRegister } from "react-icons/gi";
+import SectionWrapper from "./wrappers/SectionWrapper";
+import { Link } from "react-router-dom";
 
 const BaMiniMenu = () => {
   let [setCountry, viewCuntryOption] = useState(false);
@@ -83,17 +85,18 @@ const BaMiniMenu = () => {
  }
 
   return (
+    <SectionWrapper>
     <div className=" xsm:pt-[25px] lg:pt-[83Px] flex justify-between items-center ">
       <div className="text-white xsm:font-normal lg:font-bold text-base flex justify-center items-center xsm:pl-[20px] sm:pl-[150px] md:pl-[200px] lg:pl-[315px]">
         <div className="xsm:mr-[5px] lg:mr-[21px]">
-          <h1>Support</h1>
+         <Link> <h1>Support</h1></Link>
         </div>
 
         <div className="flex  xsm:mr-[5px] lg:mr-[25px]">
           <select
             name=""
             id=""
-            className="bg-transparent border-none"
+            className="bg-transparent border-none outline-none"
             onChange={(e) => handleCurency(e.target.value)}
           >
             <option value="EUR" className="text-black">
@@ -109,7 +112,7 @@ const BaMiniMenu = () => {
         </div>
 
         <div className="relative">
-          <div className="flex justify-center items-center gap-2">
+          <button className="flex justify-center items-center gap-2">
             <div
               className="flex justify-center items-center xsm:gap-1 lg:gap-5 "
               onClick={() => viewCuntryOption(!setCountry)}
@@ -126,7 +129,7 @@ const BaMiniMenu = () => {
                 <FaAngleDown />
               </div>
             </div>
-          </div>
+          </button>
 
           <div
             className={`${
@@ -136,7 +139,7 @@ const BaMiniMenu = () => {
             }`}
           >
             {ViewOptionCountry.map((option) => (
-              <div
+              <button
                 className="flex justify-center items-center gap-5"
                 id={option.id}
                 onClick={(e) => setCountryAndFlag(e.currentTarget.id)}
@@ -152,7 +155,7 @@ const BaMiniMenu = () => {
                 <div className="flex justify-center items-center">
                   <h1 className=" text-[15px] font-normal">{option.country}</h1>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -203,6 +206,7 @@ const BaMiniMenu = () => {
       </div>
 
     </div>
+    </SectionWrapper>
   );
 };
 

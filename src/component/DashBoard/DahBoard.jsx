@@ -7,23 +7,27 @@ import Footer from "../Footer"
 import Prefooter from '../Prefooter';
 import Newsteller from '../Newsteller';
 import CDCatagoryDiscripto from '../CountryDestination/CDCatagoryDiscripto';
+import SectionWrapper from '../wrappers/SectionWrapper';
 
 const DahBoard = () => {
   return (
     <div>
-      <DashBoardNavBar/>
-      <RouteView/>
-      <MainBoard/>
+      
+        <DashBoardNavBar/>
+        <RouteView/>
+        <SectionWrapper>
+            <MainBoard/>
 
-      <div className='xsm:ml-[10px] xsm:mr-[10px] xl:ml-[100px] xl:mr-[100px] h-full mb-[62px]'>
-      <Outlet/>
-      </div>
+            <div className='xsm:ml-[10px] xsm:mr-[10px] xl:ml-[100px] xl:mr-[100px] h-full mb-[62px]'>
+            <Outlet/>
+            </div>
 
-      <Newsteller/>
+            <Newsteller/>
 
-      <div className='xsm:ml-[10px] xsm:xsm-[10px] :ml-[80px] xl:mr-[80px]'>
-      <CDCatagoryDiscripto/>
-      </div>
+            <div className='xsm:ml-[10px] xsm:xsm-[10px] :ml-[80px] xl:mr-[80px]'>
+            <CDCatagoryDiscripto/>
+            </div>
+      </SectionWrapper>
 
       <Prefooter/>
       <Footer/>

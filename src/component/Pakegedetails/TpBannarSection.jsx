@@ -21,7 +21,7 @@ const TpBannarSection = () => {
 
   const topPakegeImg = [due, grass, bluewave, due, grass, bluewave];
   return (
-    <div className="xsm:mt-[30px] xsm:ms-[10px] xsm:me-4 lg:mt-[32px] lg:ms-[32px] lg:me-8" id='Photograpgs'>
+    <div className="xsm:mt-[30px] xsm:ms-[10px] xsm:me-4 lg:mt-[32px] lg:ms-[32px] xl:ml-[120px] lg:me-8" id='Photograpgs'>
       <h1 className=" lg:text-xl xsm:font-normal xsm:text-[30px] sm:font-bold sm:text-lg text-white">
         Home / Node / A trip to the mighty desert
       </h1>
@@ -55,7 +55,7 @@ const TpBannarSection = () => {
         </div>
       </div>
 
-      <div className="mt-[71px] mx-[32px] h-[360px]">
+      <div className="mt-[71px] h-[360px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={5}

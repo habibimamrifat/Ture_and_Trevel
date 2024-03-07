@@ -7,7 +7,6 @@ const Bannar = () => {
   return (
     <div className='w-full' id='bannar'> 
     <BaSlider/>
-    
     </div>
   )
 }

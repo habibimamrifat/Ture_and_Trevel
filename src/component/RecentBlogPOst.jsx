@@ -4,6 +4,7 @@ import pinaple from "../assets/img/pinaple.png";
 import spalash from "../assets/img/spalash.png";
 import hatMan from "../assets/img/hatMan.png";
 import capMan from "../assets/img/capMan.png";
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 const RecentBlogPOst = () => {
   const recentBlogPostDataset = [
@@ -38,7 +39,7 @@ const RecentBlogPOst = () => {
     },
   ];
   return (
-    
+    <SectionWrapper>
       <div className="ms-[5%] my-[5%] lg:mb-[80px]">
 
         <h1 className=" text-black text-[30px] lg:font-medium lg:text-[48px]">
@@ -91,6 +92,7 @@ const RecentBlogPOst = () => {
           ))}
         </div>
       </div>
+      </SectionWrapper>
     
   );
 };

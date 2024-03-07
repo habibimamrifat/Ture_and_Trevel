@@ -5,11 +5,12 @@ import { CiMail } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegCheckCircle } from "react-icons/fa";
 import FooterBottom from './FooterBottom';
+import SectionWrapper from './wrappers/SectionWrapper';
 
 const Footer = () => {
   return (
     <div className='bg-black w-full text-white relative pb-[177px] flex justify-center '>
-        
+        <SectionWrapper>
       <div className='pt-[5%] xsm:w-full xsm:flex xsm:flex-col xsm:justify-center xsm:items-center sm:flex-row  sm:flex-wrap    lg:grid lg:grid-cols-12 lg:mx-[5%]'>
 
             <div className='sm:w-2/3 sm:flex sm:justify-center lg:col-span-4 lg:w-full'>
@@ -79,6 +80,7 @@ const Footer = () => {
             </div>
       </div>
       <FooterBottom/>
+      </SectionWrapper>
     </div>
   )
 }

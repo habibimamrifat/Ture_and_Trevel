@@ -24,6 +24,7 @@ import PakageReview from "./PakageReview";
 import Footer from "../Footer"
 import Prefooter from "../Prefooter";
 import SideNavBar from "./SideNavBar";
+import SectionWrapper from "../wrappers/SectionWrapper";
 
 const Pakagedetails = () => {
  
@@ -39,12 +40,15 @@ const Pakagedetails = () => {
     <div className="w-[100%]">
 
       <div className="w-full h-auto bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${bannerBg})`}}>
+        <SectionWrapper>
         <BaMiniMenu/>
         <BaNavbar/>
         <TpBannarSection/>
-        <TpBannaeBottomSEction />  
+        <TpBannaeBottomSEction />
+        </SectionWrapper>  
       </div>
 
+        <SectionWrapper>
       <div className="w-full md:grid md:grid-cols-12 gap-4">
 
         <div className="xl:ml-[37px] md:col-span-9">
@@ -60,6 +64,7 @@ const Pakagedetails = () => {
         </div>
 
       </div>
+      </SectionWrapper>
 
 
       <Prefooter/>

@@ -70,16 +70,18 @@ const Accordian = () => {
             </div>
 
             <div>
-              {isAccordianClosed === null ? (
+              {isAccordianClosed === accordian.id ? (
                 <div className="h-[44px] w-[44px] rounded-full bg-[#D9D9D9] flex justify-center items-center text-2xl font-semibold">
-                  +
-                </div>
+                -
+              </div>
               ) : (
+                
                 <div className="h-[44px] w-[44px] rounded-full bg-[#D9D9D9] flex justify-center items-center text-2xl font-semibold">
-                  -
-                </div>
+                +
+              </div>
               )}
             </div>
+
           </div>
  <hr />
           <div

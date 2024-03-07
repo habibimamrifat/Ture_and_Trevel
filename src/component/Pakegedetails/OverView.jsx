@@ -3,7 +3,7 @@ import Accordian from "./Accordian";
 
 const OverView = () => {
   return (
-    <div className="xsm:ml-3 xsm:mr-3"  id="overView">
+    <div className=""  id="overView">
       <div className="xsm:mt-[50px] md:mt-[80px] lg:mt-[113px]">
         <h1 className="xsm:font-normal xsm:text-[30px] lg:font-semibold lg:text-[48px] text-black">Overview</h1>
         <p className="xsm:text-[15px] mt-[45px] lg:text-[20px] font-normal">

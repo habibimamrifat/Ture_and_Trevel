@@ -23,11 +23,11 @@ const Booking = () => {
 
     }
   ]
-
+  
   return (
     <div>
       <div>
-        <u className='text-[#FF3B00]'><h1 className='xsm:text-[30px] xl:text-[48px] text-black font-normal'>Trips You have Booked!</h1></u>
+        <u className='text-[#FF3B00]'><h1 className='xsm:text-[30px] lg:text-[48px] font-bold text-black'>Trips You have Booked!</h1></u>
         <div className='xsm:mt-[30px] xl:mt-[60px] flex flex-col gap-14'>
 
           {

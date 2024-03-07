@@ -16,7 +16,7 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-[#645E5E]">My Profile</h1>
+        <h1 className="xsm:text-[30px] lg:text-[48px] font-bold text-black">My Profile</h1>
 
         <div className="xsm:mt-[30px] lg:mt-[40px] lg:grid lg:grid-cols-12 lg:gap-4 ">
 

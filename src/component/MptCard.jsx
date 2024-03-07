@@ -1,11 +1,13 @@
 import React from "react";
 import { FaBookmark } from "react-icons/fa";
 import Rating from "./Rating";
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 const MptCard = ({ aboutTure,  }) => {
 
 
   return (
+    <SectionWrapper>
     <div className="xsm:w-full xl:w-[578px] xl:h-[360px] p-3 rounded-2xl relative">
       <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover" />
 
@@ -55,6 +57,7 @@ const MptCard = ({ aboutTure,  }) => {
 
       </div>
     </div>
+    </SectionWrapper>
   );
 };
 

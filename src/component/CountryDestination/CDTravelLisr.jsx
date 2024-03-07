@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
 import { RxCrossCircled } from "react-icons/rx";
+import { Link } from "react-router-dom";
+
 
 const CDTravelLisr = () => {
   const [toggle, setToggleValue] = useState(false);
 
   return (
-    <div>
+    <div className="xsm:mt-[50px]">
       <div className="text-white">
         <h1 className="font-normal xsm:text-[30px] lg:text-[48px] ">
           Travel list Full With
@@ -17,7 +19,8 @@ const CDTravelLisr = () => {
         </p>
 
         <div className="w-full h-auto bg-[#200D98] text-white xsm:mt-[50px] sm:mt-[80px] md:mt-[100px] lg:mt-[150px] rounded-[10px] overflow-hidden">
-          <div className="relative">
+        <div className="relative">
+            {/* ........... button to open.... */}
             <div
               className={` xsm:absolute sm:hidden ${
                 toggle
@@ -32,11 +35,11 @@ const CDTravelLisr = () => {
             <div
               className={`xsm:absolute  sm:h-[45px] w-[100%] sm:relative sm:flex sm:justify-center ${
                 toggle
-                  ? "flex flex-col z-10 rounded-xl bg-[#200D98] shadow-md shadow-[#5D46E8] sm:flex-row "
+                  ? "flex flex-col z-10 rounded-xl bg-[#200D98] shadow-md shadow-[#ffffff] overflow-hidden sm:flex-row "
                   : "xsm:top-[99999px] xsm:left-[99999px] sm:top-0 sm:left-0 "
               }`}
             >
-              {/* ........... button to open.... */}
+              {/* ...........the button to close     */}
               <div
                 className={` xsm:absolute sm:hidden ${
                   toggle
@@ -47,39 +50,53 @@ const CDTravelLisr = () => {
               >
                 <RxCrossCircled className="text-[20px]" />
               </div>
-              {/* ......the button to close....  */}
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Hotel
-                </h1>
-              </div>
-              {/* ...........the button to close     */}
 
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+              {/* ......the button to close....  */}
+              <Link to="#" className="flex-1 border-black/20">
+              <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Hotel</h1>
+              </div>
+              </Link>
+
+              <Link to="#" className="flex-1 border-black/20">
+              <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
                 <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
                   Flights
                 </h1>
               </div>
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+              </Link>
+              
+              <Link to="#" className="flex-1 border-black/20">
+              <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
                 <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
                   Cars
                 </h1>
               </div>
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Packages
-                </h1>
-              </div>
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+              </Link>
+
+              <Link to="/pakagedetails" className="flex-1 border-black/20">
+                <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
+                  <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
+                    Packages
+                  </h1>
+                </div>
+              </Link>
+                
+              <Link to="#" className="flex-1 border-black/20"> 
+              <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
                 <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
                   Cruise
                 </h1>
               </div>
-              <div className="border-[1px] border-[#5D46E8] flex justify-center items-center h-full xsm:w-[80%] sm:flex-1 xl:w-[209px] ">
+              </Link>
+
+              <Link to="#" className="flex-1 border-black/20">
+              <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
                 <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
                   Holiday
                 </h1>
               </div>
+              </Link>
             </div>
           </div>
 

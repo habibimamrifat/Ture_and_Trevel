@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowDown } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { CiTwitter } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
+import SectionWrapper from './wrappers/SectionWrapper';
 
 const FooterBottom = () => {
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+      setCurrentDate(date.toDateString());
+    }, 1000); // Update every 1 second
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
-    <div>
+    <SectionWrapper>
       <div className='w-[80%] h-[154px] mt-[23px] flex justify-around absolute bottom-0 right-0 rounded-ss-2xl overflow-hidden '>
             <div className='w-[161px] h-full bg-[#FF3B00] flex justify-center items-center'>
                 <FaArrowDown className='text-3xl text-white font-normal'/>
@@ -19,11 +33,12 @@ const FooterBottom = () => {
                     <FaInstagram className='text-3xl text-black font-normal' />
                 </div>
                 <div className='text-black'>
-                     <h1> @ All Copyright 2022, Solutya</h1>
+                     <h1> @ All Copyright <span>{currentDate}</span>, Solutya</h1>
                 </div>
             </div>
       </div>
-    </div>
+      </SectionWrapper>
+    
   )
 }
 

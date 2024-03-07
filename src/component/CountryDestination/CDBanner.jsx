@@ -4,11 +4,13 @@ import BaMiniNavMenu from "../BaMiniMenu"
 import BaNavBar from "../BaNavbar"
 import CDTravelLisr from './CDTravelLisr'
 import CDSlider from './CDSlider'
+import SectionWrapper from '../wrappers/SectionWrapper'
 
 
 const CDBanner = () => {
   return (
-    <div className='w-full h-auto ' style={{backgroundImage: `url(${bannar})` }}>
+    <div className='w-full h-auto bg-cover ' style={{backgroundImage: `url(${bannar})` }}>
+      <SectionWrapper>
      <BaMiniNavMenu />
      <BaNavBar />
 
@@ -17,6 +19,7 @@ const CDBanner = () => {
      <CDSlider/>
      
      </div>
+     </SectionWrapper>
 
     </div>
   )

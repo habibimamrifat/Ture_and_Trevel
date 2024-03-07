@@ -63,13 +63,13 @@ const BaSlider = () => {
       className="-ml-3 h-[100vh]"
         >
           <div key={1} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover bg-amber-300" />
+            <img src={causolBg} alt="not found" className="object-cover w-full" />
           </div>
           <div key={2} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover h-full bg-amber-300" />
+            <img src={causolBg} alt="not found" className="object-cover h-full w-full" />
           </div>
           <div key={3} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover bg-amber-300" />
+            <img src={causolBg} alt="not found" className="object-cover w-full" />
           </div>
         </Slider>
 

@@ -7,7 +7,7 @@ const MainBoard = () => {
     <div>
 
         <div className='xl:ml-[100px] mt-[42px] xl:mr-[100px] xsm:ml-[10px] xsm:mr-[10px]'>
-        <u className='text-red-600'><h1 className='xsm:text-[30px] xsm:font-normal xl:xl:text-[48px] font-semibold text-black'>Dashboard</h1></u>
+        <u className='text-red-600'><h1 className='xxsm:text-[30px] lg:text-[48px] font-bold text-black'>Dashboard</h1></u>
         
             <div className='flex justify-around items-center flex-wrap  xsm:mt-[50px] xl:mt-[80px] mb-[40px]'>
 

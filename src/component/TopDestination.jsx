@@ -5,6 +5,7 @@ import india from "../assets/img/India.png"
 import japan from "../assets/img/Japan.png"
 import maldivs from '../assets/img/Maldives.png'
 import africa from '../assets/img/Africa.png'
+import SectionWrapper from './wrappers/SectionWrapper'
 
 const TopDestination = () => {
     const topDestinationData =[
@@ -34,6 +35,7 @@ const TopDestination = () => {
         },
     ]
   return (
+    <SectionWrapper>
     <div className='w-full mt-[81px]'>
       <div className='xsm:ml-[10px] lg:ml-[104px] xsm:mr-[10px] lg:mr-[104px] '>
         <h1 className='xsm:text-[30px] lg:text-[48px] font-medium text-black'>Top Destinations</h1>
@@ -62,6 +64,7 @@ const TopDestination = () => {
         </div>
       </div>
     </div>
+    </SectionWrapper>
   )
 }
 

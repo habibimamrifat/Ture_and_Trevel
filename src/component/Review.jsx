@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 
 // import required modules
@@ -56,6 +57,7 @@ const Review = () => {
 
 
   return (
+    <SectionWrapper>
    <div className="w-full">
      <div className="mt-[77px] pb-8">
       <div>
@@ -97,7 +99,7 @@ const Review = () => {
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
         }}
         
@@ -140,41 +142,11 @@ const Review = () => {
 
             
           </Swiper>
-
-          {/* {reviewDataSet.map((review, index) => (
-
-            <div className="flex flex-col items-center justify-centers " key={index}>
-              <div className="h-[260px] w-[260px] rounded-full">
-                <img
-                  src={review.customerImg}
-                  className="h-full w-full object-cover"
-                  alt=""
-                />
-              </div>
-              <div className="w-[352px] h-[382px] mt-[15px] shadow-xl shadow-[#00000040] ">
-                <div className="flex flex-col justify-center items-center">
-                  <div className="mt-[47px]">
-                    <Rating retting={review.CustomerReting} />
-                  </div>
-                  <div className="text-center mt-[30px]">
-                    <p>{review.customerReview}</p>
-                    <div className="mt-[75px] pb-[49px]">
-                      <h1 className="text-[20px] font-medium text-black">
-                        {review.customerName}
-                      </h1>
-                      <h1 className="text-base font-normal text-[#FF3B00] ">
-                        {review.authority}
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))} */}
         </div>
       </div>
     </div>
    </div>
+   </SectionWrapper>
   );
 };
 

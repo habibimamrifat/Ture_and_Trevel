@@ -2,12 +2,14 @@ import React from "react";
 
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 const BaBookNOw = ({next, previous}) => {
   
   return (
-    <div className="mt-[37px] flex justify-between items-center ">
-      <div className="text-xl font-bold xsm:ml-[20px] sm:ml-[50px] xl:ml-[106px] text-white gap-2">
+    <SectionWrapper>
+    <div className="mt-[37px] flex justify-between items-center xl:ml-[120px] ">
+      <div className="text-xl font-bold xsm:ml-[20px] sm:ml-[50px]  text-white gap-2">
         <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md">
           Book Now
         </button>
@@ -36,6 +38,7 @@ const BaBookNOw = ({next, previous}) => {
       </div>
 
     </div>
+    </SectionWrapper>
   );
 };
 
