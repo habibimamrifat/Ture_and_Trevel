@@ -4,7 +4,7 @@ import Accordian from "./Accordian";
 const OverView = () => {
   return (
     <div className=""  id="overView">
-      <div className="xsm:mt-[50px] md:mt-[80px] lg:mt-[113px]">
+      <div className="xsm:mt-[50px] xsm:ml-[20px] xsm:mr-[20px] md:mt-[80px] lg:mt-[113px]">
         <h1 className="xsm:font-normal xsm:text-[30px] lg:font-semibold lg:text-[48px] text-black">Overview</h1>
         <p className="xsm:text-[15px] mt-[45px] lg:text-[20px] font-normal">
           But I must explain to you how all this mistaken idea of denouncing

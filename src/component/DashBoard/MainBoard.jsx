@@ -44,7 +44,7 @@ const MainBoard = () => {
                  rotate-45 -z-10 ${selectRoute === 'Cards' ? 'block':'hidden'}`}></div>
                 </Link>
                 
-                <Link to="wishlist" className='lg:w-[173px] lg:h-[50px] xsm:w-[100px] relative xsm:mt-[20px] sm:mt-0 xsm:border-x-[1px] xsm:border-white sm:border-none'>
+                <Lyink to="wishlist" className='lg:w-[173px] lg:h-[50px] xsm:w-[100px] relative xsm:mt-[20px] sm:mt-0 xsm:border-x-[1px] xsm:border-white sm:border-none'>
                 <div className={`lg:w-[173px] lg:h-[50px] xsm:w-[100px]  flex justify-center items-center ${selectRoute === 'Wishlist' ? 'bg-[#200D98]':'bg-[#FF3B00]'}`} onClick={()=>setSelectedRoute("Wishlist")}>
                     <h1 className='xl:font-bold xl:text-[20px] xsm:text-[15px] text-white'>Wishlist</h1>
                 </div>

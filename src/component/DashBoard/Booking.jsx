@@ -34,7 +34,7 @@ const Booking = () => {
             Bookingdataset.map((BookingDetail, index)=>(
               <div className=' lg:grid lg:grid-cols-12 lg:gap-5 shadow-md shadow-[#d2d2d2] rounded-[5px]' key={index}>
 
-                  <div className="lg:col-span-3 lg:ml-[40px] lg:mt-[20px]">
+                  <div className="xsm:ml-[20px] xsm:mr-[20px]  lg:col-span-3 lg:ml-[40px] lg:mt-[20px]">
                     <div className='border-[1px] h-[220px] w-[212px] flex justify-center items-center'>
                       <div className='flex flex-col justify-center items-center'>
                         <h1 className='font-normal xsm:text-[30px] lg:text-[64px] text-[#FF3B00]'>
@@ -45,7 +45,7 @@ const Booking = () => {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-6 mb-[50px] mt-[20px]">
+                  <div className="xsm:ml-[20px] xsm:mr-[20px] lg:col-span-6 mb-[50px] mt-[20px]">
 
                     <h1 className='font-medium xsm:text-[20px] lg:text-[32px] text-[#FF3B00]'>
                     Restuarent Details
@@ -76,16 +76,16 @@ const Booking = () => {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-3 mr-[40px] mt-[20px] xsm:pb-10 lg:pb-0 ">
+                  <div className="xsm:ml-[20px] xsm:mr-[20px] lg:col-span-3 mr-[40px] mt-[20px] xsm:pb-10 lg:pb-0 ">
                       
                       <button className='w-[80%] sm:w-[60%] md:w-[50%] lg:w-[209px] h-[57px] flex justify-center items-center text-[20px] font-normal border-[1px] border-[#FF3B00] text-[#FF3B00] rounded-[10px]'>
                       Message
                       </button>
                       <button className='w-[80%] sm:w-[60%] md:w-[50%] lg:w-[209px] h-[57px] flex justify-center items-center text-[20px] font-normal border-[1px] border-[#200D98] text-[#200D98] rounded-[10px] mt-[20px]'>
-                      Message
+                      Approve
                       </button>
                       <button className='w-[80%] sm:w-[60%] md:w-[50%] lg:w-[209px] h-[57px] flex justify-center items-center text-[20px] font-normal border-[1px] bg-[#200D98] text-white rounded-[10px] mt-[20px]'>
-                      Message
+                      Cancle
                       </button>
                       
                   </div>
