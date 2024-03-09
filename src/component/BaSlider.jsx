@@ -1,28 +1,20 @@
 import React, { useRef } from "react";
-import BaMiniMenu from "./BaMiniMenu";
-import BaNavbar from "./BaNavbar";
-import BaCountry from "./BaCountry";
-import BaBookNOw from "./BaBookNOw";
-
 // carusol importment starts
 import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
-import causolBg from "../assets/img/herobg.png";
-
-import BabotttomSection from "./BabotttomSection";
+import bg1 from "../assets/img/herobg.png"
+import BaSliderCard from "./BaSliderCard";
+import BaMiniMenu from './BaMiniMenu';
+import BaNavbar from './BaNavbar';
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 // carusol impoartment ends
 
 const BaSlider = () => {
-  // carusol coding starts
-  const [oldSlide, setOldSlide] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [activeSlide2, setActiveSlide2] = useState(0);
 
+  
   let sliderRef = useRef(null);
 
   const next = () => {
@@ -47,12 +39,59 @@ const BaSlider = () => {
     afterChange: (current) => setActiveSlide2(current),
     
   };
+  // banner data set 
+  const BannerDaataset = [
+    {
+      img:bg1,
+      stateName:'United',
+      countryName:"Arizona",
+      aboutCountry:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      continenlalName:"Asia",
+      next:next,
+      previous:previous
+    },
+    {
+      img:bg1,
+      stateName:'United State of America',
+      countryName:"Africa",
+      aboutCountry:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      continenlalName:"Africa",
+      next:next,
+      previous:previous
+    },
+    {
+      img:bg1,
+      stateName:'of America',
+      countryName:"Ice Land",
+      aboutCountry:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      continenlalName:"Arab",
+      next:next,
+      previous:previous
+    },
+  ]
+  // carusol coding starts
+  
+  const [oldSlide, setOldSlide] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeSlide2, setActiveSlide2] = useState(0);
+
 
   //   carusol coding ends
   
   return (
-    <div className="relative h-screen w-full ">
-      <div className="slider-container h-full w-full xsm:hidden sm:block" >
+    <div className="relative h-screen w-full bg-black">
+        
+        <div className="absolute z-50 w-full">
+
+          <SectionWrapper>
+            <BaMiniMenu />
+            <BaNavbar />
+          </SectionWrapper>
+
+        </div>
+        
+  
+      <div className="slider-container h-full w-full" >
         <Slider
         
           ref={(slider) => {
@@ -62,30 +101,27 @@ const BaSlider = () => {
         
       className="-ml-3 h-[100vh]"
         >
-          <div key={1} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover w-full" />
-          </div>
-          <div key={2} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover h-full w-full" />
-          </div>
-          <div key={3} className="h-full">
-            <img src={causolBg} alt="not found" className="object-cover w-full" />
-          </div>
+          {
+            BannerDaataset.map((eachBanner)=>(
+              <BaSliderCard
+              eachBanner={eachBanner}
+              />
+            ))
+          }
+          
+
+          
         </Slider>
 
       </div>
-
-      <div className=" top-0 bottom-0 left-0 right-0 xsm:relative xsm:bg-black sm:absolute sm:bg-transparent">
-        <BaMiniMenu />
-        <BaNavbar />
-        <BaCountry />
-        <BaBookNOw 
-        next={next}
-        previous={previous}
-        />
-        <BabotttomSection/>
-      </div>
       
+      
+    
+    
+        
+      
+
+
     </div>
   );
 };

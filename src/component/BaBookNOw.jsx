@@ -8,7 +8,8 @@ const BaBookNOw = ({next, previous}) => {
   
   return (
     <SectionWrapper>
-    <div className="mt-[37px] flex justify-between items-center xl:ml-[120px] ">
+    <div className="mt-[37px] flex xsm:flex-col sm:flex-row justify-between items-center xl:ml-[120px] ">
+
       <div className="text-xl font-bold xsm:ml-[20px] sm:ml-[50px]  text-white gap-2">
         <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md">
           Book Now
@@ -16,7 +17,7 @@ const BaBookNOw = ({next, previous}) => {
         <button className="px-[20px] py-[10px] rounded-md">Choose Tour</button>
       </div>
 
-      <div className="xsm:hidden sm:flex justify-center items-center gap-6 sm:mr-[50px] xl:mr-[126px]  ">
+      <div className="sm:flex justify-center items-center gap-6 sm:mr-[50px] xl:mr-[126px] mt-[10px]  ">
 
         <button onClick={previous}>
         <div
