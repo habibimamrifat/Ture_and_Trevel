@@ -86,13 +86,13 @@ const BaMiniMenu = () => {
 
   return (
     <SectionWrapper>
-    <div className=" xsm:pt-[25px] lg:pt-[83Px] flex justify-between items-center ">
+    <div className=" pt-[5%] flex justify-between items-center ">
       <div className="text-white xsm:font-normal lg:font-bold text-base flex justify-center items-center xsm:pl-[20px] sm:pl-[150px] md:pl-[200px] lg:pl-[315px]">
-        <div className="xsm:mr-[5px] lg:mr-[21px]">
+        <div className="">
          <Link> <h1>Support</h1></Link>
         </div>
 
-        <div className="flex  xsm:mr-[5px] lg:mr-[25px]">
+        <div className="flex ">
           <select
             name=""
             id=""

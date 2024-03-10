@@ -7,6 +7,7 @@ import rassto from "../assets/img/rashasto.png"
 import southpoolsto from "../assets/img/southpoolsto.png"
 import africasto from "../assets/img/africasto.png"
 import GReceSto from "../assets/img/GReceSto.png"
+import SectionWrapper from "./wrappers/SectionWrapper";
 
 const TopStories = () => {
  const  topStoriesDataset = [
@@ -33,8 +34,9 @@ const TopStories = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center items-center" id="stories">
-      <div className="xsm:ml-[20px] xsm:mr-[20px] mt-[80px] ">
+    <SectionWrapper>
+    <div className="w-full flex justify-center items-center " id="stories">
+      <div className="mt-[80px] mx-[5%] ">
         <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px]">
           <h1 className="xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]">
@@ -46,10 +48,10 @@ const TopStories = () => {
           </button>
         </div>
 
-        <div className="flex justify-center items-center flex-wrap gap-5 mt-[40px]  lg:h-[374px] lg:overflow-hidden">
+        <div className="flex justify-center flex-wrap mt-[40px] sm:gap-2  lg:h-[374px] lg:overflow-hidden w-full">
           {topStoriesDataset.map((topStories, index) => (
-            <div className=" md:w-[45%] lg:w-[267px] h-[374px]  relative rounded-[20px] overflow-hidden" key={index}>
-              <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center ">
+            <div className=" xsm:w-full sm:w-[48%] lg:w-[267px] h-[374px]  relative rounded-[20px] overflow-hidden" key={index}>
+              <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center items-center ">
                <div className="flex flex-col justify-center items-center">
                <div className="h-[100px] w-[100px] rounded-full">
                     <img src={topStories.countryImg} alt="" />
@@ -62,13 +64,15 @@ const TopStories = () => {
               <img
                 src={topStories.storyImg}
                 alt=""
-                className="w-full h-full object-fill block"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
       </div>
+
     </div>
+    </SectionWrapper>
   );
 };
 

@@ -40,7 +40,7 @@ const RecentBlogPOst = () => {
   ];
   return (
     <SectionWrapper>
-      <div className="ms-[5%] my-[5%] lg:mb-[80px]">
+      <div className=" mx-[5%] lg:mb-[80px]">
 
         <h1 className=" text-black text-[30px] lg:font-medium lg:text-[48px]">
           Recent Blog Posts
@@ -52,7 +52,7 @@ const RecentBlogPOst = () => {
         <div className="mt-[41px]  gap-3 flex justify-center items-center xsm:flex-col xsm:items-center xsm:justify-center sm:flex-wrap sm:flex-row sm:justify-start lg:flex lg:flex-wrap ">
 
           {recentBlogPostDataset.map((blogPost,index) => (
-            <div className="xsm:w-[90%] sm:w-[45%] lg:w-[382px]" key={index}>
+            <div className="xsm:w-full sm:w-[48%] lg:w-[30%] xl:w-[382px]" key={index}>
               
               <div className=" w-full h-[252px] rounded-lg overflow-hidden">
 

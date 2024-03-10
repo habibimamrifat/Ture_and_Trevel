@@ -8,8 +8,8 @@ const MptCard = ({ aboutTure,  }) => {
 
   return (
     <SectionWrapper>
-    <div className="xsm:w-full xl:w-[578px] xl:h-[360px] p-3 rounded-2xl relative">
-      <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover" />
+    <div className="xsm:w-full  xl:h-[360px] rounded-2xl relative">
+      <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover w-full" />
 
       <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl flex flex-col justify-between m-[2%]">
 

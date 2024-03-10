@@ -62,7 +62,7 @@ const MostPopulerTures = () => {
   ];
   return (
     <SectionWrapper>
-      <div className="w-full xsm:mt-[650px] sm:mt-[600px] md:mt-[380px] lg:mt-[350px] xl:mt-[450px]">
+      <div className="w-full xsm:mt-[450px] sm:mt-[300px] md:mt-[380px] lg:mt-[350px] xl:mt-[250px]">
         <div className=" lg:ml-[103px] lg:mr-[100px]">
           <div>
             <div>
@@ -99,10 +99,10 @@ const MostPopulerTures = () => {
             </div>
           </div>
 
-          <div className="slider-container mt-[40px] w-[full] rounded-3xl">
+          <div className="slider-container mt-[40px] w-[full] rounded-3xl mx-[5%]">
             <Swiper
               slidesPerView={1}
-              spaceBetween={5}
+              spaceBetween={0}
               loop={true}
               className="mySwiper"
               onBeforeInit={(swiper) => {
@@ -112,6 +112,10 @@ const MostPopulerTures = () => {
                 450: {
                   slidesPerView: 1,
                   spaceBetween: 0,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 5,
                 },
                 768: {
                   slidesPerView: 2,
