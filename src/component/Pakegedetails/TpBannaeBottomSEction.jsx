@@ -3,9 +3,9 @@ import Rating from "../Rating"
 
 const TpBannaeBottomSEction = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center xsm:mt-[10px] lg:mt-[40px] xl:mt-[118px]'>
 
-      <div className='xsm:mt-[10px] lg:mt-[40px] xl:mt-[118px] text-white flex xsm:flex-col sm:flex-row sm:justify-center sm:flex-wrap xl:flex-nowrap pb-10'>
+      <div className=' text-white flex xsm:flex-col sm:flex-row sm:justify-center sm:flex-wrap xl:flex-nowrap pb-10'>
 
         <div className='w-[270px] h-[211px] flex flex-col justify-center items-center xsm:border-b-2 md:border-b-0 md:border-r-2 border-white'>
             <h1 className='font-normal text-[20px] text-center'>Check In</h1>

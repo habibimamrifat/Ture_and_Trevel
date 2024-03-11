@@ -48,7 +48,7 @@ const TopStories = () => {
           </button>
         </div>
 
-        <div className="flex justify-center flex-wrap mt-[40px] sm:gap-2  lg:h-[374px] lg:overflow-hidden w-full">
+        <div className="flex justify-center flex-wrap mt-[40px] gap-2 sm:gap-2  lg:h-[374px] lg:overflow-hidden w-full">
           {topStoriesDataset.map((topStories, index) => (
             <div className=" xsm:w-full sm:w-[48%] lg:w-[267px] h-[374px]  relative rounded-[20px] overflow-hidden" key={index}>
               <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center items-center ">

@@ -7,11 +7,12 @@ import { GiCancel } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import SectionWrapper from "./wrappers/SectionWrapper";
+import SideNavigation from "./SideNavigation";
 const BaNavbar = () => {
   const [menuButtonClicked, setMenuButtonClicked] = useState(false);
-  console.log(menuButtonClicked);
+  // console.log(menuButtonClicked);
   const [handleSearchClicked, setHandleSerchClicked] = useState(false);
-  console.log("search", handleSearchClicked);
+  // console.log("search", handleSearchClicked);
 
   return (
     <SectionWrapper>
@@ -92,9 +93,7 @@ const BaNavbar = () => {
 
         {/* search button on the right  */}
         <div
-          className={`w-[20px]  text-white ${
-            menuButtonClicked ? " absolute top-[30%] right-2" : "relative"
-          }`}
+          className={`w-[20px]  text-white`}
         >
           <FaSearch
             className={`text-xl ${handleSearchClicked ? "hidden" : "block"}`}
@@ -105,7 +104,7 @@ const BaNavbar = () => {
 
         {/* ........serch field which appers at the top.......  */}
         <div
-          className={`fixed  flex justify-around shadow-xl shadow-[#466B85] z-[100] bg-[#344C68] ${
+          className={`fixed  flex justify-around shadow-xl shadow-[#466B85] z-[100] bg-[#344C68] px-5 ${
             handleSearchClicked
               ? "top-0 left-0 w-full min-h-[60px]"
               : "top-[99999px] left-[99999px] w-0 h-0"
@@ -131,67 +130,9 @@ const BaNavbar = () => {
         {/* ........serch field which appers at the top.......  */}
 
         {/* side nav bar for smaller device  */}
-        <div
-          className={` h-[800px] absolute left-0 top-0 bg-white transition-w text-black ${
-            menuButtonClicked ? "w-[300px] sm:hidden" : " w-0"
-          }`}
-        >
-          <div className="relative w-full h-full">
-            {/* button to close the nav section  */}
-            <div
-              className={` w-full absolute top-5 left-[80%] ${
-                menuButtonClicked ? "sm:hidden" : "hidden"
-              }`}
-            >
-              <h1
-                className="text-xl h-[30px] w-[30px] rounded-full bg-black/20 flex justify-center items-center"
-                onClick={() => setMenuButtonClicked(!menuButtonClicked)}
-              >X </h1>
-            </div>
-            {/* button to close the nav section  */}
-
-            <div
-              className={`flex w-[100%]  ${
-                menuButtonClicked ? " sm:hidden" : " hidden"
-              }`}
-            >
-              <div className="w-full h-auto mt-16">
-                <ul>
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link to="/">HOME</Link>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <div className="flex items-center ">
-                      <h1>FEATURES</h1>
-                      <FaChevronDown />
-                    </div>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link to="/pakagedetails">PAGES</Link>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link to="/country_destination">TOURS</Link>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link>CARS</Link>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link>HOTELS</Link>
-                  </li>
-
-                  <li className=" w-full h-10 flex justify-center items-center border-[1px] border-gray-400 text-gray-700 hover:bg-orange-600 hover:text-white">
-                    <Link>FLIGHTS</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SideNavigation
+        menuButtonClicked={menuButtonClicked}
+        setMenuButtonClicked={setMenuButtonClicked}/>
         {/* side nav bar for smaller device  */}
       </div>
     </SectionWrapper>

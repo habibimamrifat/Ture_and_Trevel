@@ -97,8 +97,8 @@ const BaSlider = () => {
           {...settings}
           className="-ml-3 h-[100vh]"
         >
-          {BannerDaataset.map((eachBanner) => (
-            <BaSliderCard eachBanner={eachBanner} />
+          {BannerDaataset.map((eachBanner, index) => (
+            <BaSliderCard eachBanner={eachBanner} key={index} />
           ))}
         </Slider>
 

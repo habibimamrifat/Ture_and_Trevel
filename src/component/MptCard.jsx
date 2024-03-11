@@ -25,17 +25,17 @@ const MptCard = ({ aboutTure,  }) => {
 
         <div className="py-4">
 
-        <div className="w-full xsm:m-[1%] xl:h-[78px] xl:ml-[35px]">
+        <div className="w-full xsm:m-[1%] xl:h-[78px] xl:mx-[2%]">
             <h1 className="text-wrap xsm:text-[20px] xl:text-[32px] font-normal text-white px-4">
               {aboutTure.detail}
             </h1>
         </div>
 
-        <div className="xl:mt-[32px]  xl:ml-[35px] flex justify-around xsm:m-[2%]">
+        <div className="xl:mt-[32px]  xl:ml-[35px] flex justify-around xsm:mb-[2%]">
 
           <div className="font-normal text-sm xl:text-xl text-white flex xsm:flex-col md:flex-row items-center gap-1">
 
-          <div className="border-r-[1px] border-white">
+          <div className="border-r-[1px] border-white  ">
             <p className="px-1">{aboutTure.days} <span>days</span></p>
             </div>
             <div>

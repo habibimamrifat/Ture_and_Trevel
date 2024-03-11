@@ -8,6 +8,12 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { RxCrossCircled } from "react-icons/rx";
 import SectionWrapper from "./wrappers/SectionWrapper";
 import { Link } from "react-router-dom";
+import { FaHotel } from "react-icons/fa6";
+import { MdFlight } from "react-icons/md";
+import { IoCarSport } from "react-icons/io5";
+import { LuPackageOpen } from "react-icons/lu";
+import { GiCruiser } from "react-icons/gi";
+import { MdOutlineHolidayVillage } from "react-icons/md";
 
 const BabotttomSection = () => {
   const [toggle, setToggleValue] = useState(false);
@@ -53,47 +59,57 @@ const BabotttomSection = () => {
 
               <Link to="#" className="flex-1 border-black/20">
               <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
+
+                <div className="flex items-center gap-4">
+                  <FaHotel className="font-normal xsm:text-[15px] sm:text-[20px] xsm:hidden lg:block"/>
                 <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Hotel</h1>
+                </div>
+                
               </div>
               </Link>
 
               <Link to="#" className="flex-1 border-black/20">
               <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Flights
-                </h1>
+                <div className="flex items-center gap-4">
+                <MdFlight className="font-normal xsm:text-[15px] sm:text-[25px] xsm:hidden lg:block"/>
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Flights</h1>
+                </div>
               </div>
               </Link>
               
               <Link to="#" className="flex-1 border-black/20">
               <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Cars
-                </h1>
+              <div className="flex items-center gap-4">
+              <IoCarSport className="font-normal xsm:text-[15px] sm:text-[25px] xsm:hidden lg:block"/>
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Cars</h1>
+                </div>
               </div>
               </Link>
 
               <Link to="/pakagedetails" className="flex-1 border-black/20">
                 <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
-                  <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                    Packages
-                  </h1>
+                <div className="flex items-center gap-4">
+                <LuPackageOpen className="font-normal xsm:text-[15px] sm:text-[25px] xsm:hidden lg:block"/>
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Packege</h1>
+                </div>
                 </div>
               </Link>
                 
               <Link to="#" className="flex-1 border-black/20"> 
               <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Cruise
-                </h1>
+              <div className="flex items-center gap-4">
+              <GiCruiser className="font-normal xsm:text-[15px] sm:text-[40px] xsm:hidden lg:block"/>
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Cruise</h1>
+                </div>
               </div>
               </Link>
 
               <Link to="#" className="flex-1 border-black/20">
               <div className="border-[1px]  flex justify-center items-center h-full xsm:w-[80%] sm:w-full sm:flex-1 hover:text-white hover:bg-orange-600 ">
-                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">
-                  Holiday
-                </h1>
+              <div className="flex items-center gap-4">
+              <MdOutlineHolidayVillage className="font-normal xsm:text-[15px] sm:text-[25px] xsm:hidden lg:block"/>
+                <h1 className="font-normal xsm:text-[15px] sm:text-[20px]">Holiday</h1>
+                </div>
               </div>
               </Link>
             </div>
@@ -107,8 +123,8 @@ const BabotttomSection = () => {
           <div
               className={` flex justify-center items-center xsm:flex-col xsm:items-center w-full lg:flex-row md:px-2 bg-white xsm:h-auto xsm:mb-10 lg:mb-0 md:h-[200px] ${
                 toggle
-                  ? "xsm:mt-[200px]  lg:mt-[0px]"
-                  : "xsm:mt-[50px]  lg:mt-[0px]"
+                  ? "xsm:mt-[200px]  sm:mt-[5px]"
+                  : "xsm:mt-[50px]  sm:mt-[5px]"
               }`}
             >
               <div className="text-start w-full  px-[2%]">
@@ -120,7 +136,7 @@ const BabotttomSection = () => {
                 <input
                   type="text"
                   placeholder="Location here"
-                  className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] w-full lg::w-[280px] text-base font-normal ps-[23px]"
+                  className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] w-full lg::w-[280px] text-base font-normal ps-[23px] outline-none"
                 />
               </div>
 
@@ -134,7 +150,7 @@ const BabotttomSection = () => {
                   <input
                     type="text"
                     placeholder="dd/mm/yy"
-                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px]"
+                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px] outline-none"
                   />
                 </div>
 
@@ -147,7 +163,7 @@ const BabotttomSection = () => {
                   <input
                     type="text"
                     placeholder="dd/mm/yy"
-                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px]"
+                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px] outline-none"
                   />
                 </div>
 
@@ -158,9 +174,9 @@ const BabotttomSection = () => {
                   </div>
 
                   <input
-                    type="text"
+                    type="number"
                     placeholder="Travelers"
-                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px]"
+                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal ps-[23px] outline-none"
                   />
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import flag1 from "../assets/img/Ellipse 30.png";
 import { FaAngleDown } from "react-icons/fa";
 import SignUpPage from "./SignUpPageFinal";
@@ -13,6 +13,29 @@ const BaMiniMenu = () => {
   let [setCountry, viewCuntryOption] = useState(false);
   let [destination, setDestination] = useState("BAN");
   let [flag, setFlag] = useState(flag1);
+
+//  out side click event for country shiowing drop down  
+  const containerRef = useRef(null);
+
+  const handleOutsideClick = (event) => {
+    if (containerRef.current && !containerRef.current.contains(event.target)) {
+      console.log("Clicked outside");
+      viewCuntryOption(false);
+    }
+  };
+
+  useEffect(() => {
+    if (setCountry) {
+      console.log("Adding event listener");
+      window.addEventListener("click", handleOutsideClick);
+    }
+
+    return () => {
+      console.log("Removing event listener");
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, [setCountry]);
+ //  out side click event for country shiowing drop down 
 
   let [isSignupClosed, setIsSignUpClosed] = useState(null);
 
@@ -61,7 +84,7 @@ const BaMiniMenu = () => {
     let OptionCountry = countryAndFlagArr.filter(
       (countryandflag) => countryandflag.id != id
     );
-    console.log(OptionCountry);
+    // console.log(OptionCountry);
     setViewOPtionCountry((ViewOptionCountry = OptionCountry));
     viewCuntryOption(!setCountry);
   }
@@ -111,7 +134,7 @@ const BaMiniMenu = () => {
           </select>
         </div>
 
-        <div className="relative">
+        <div className="relative" ref={containerRef}>
           <button className="flex justify-center items-center gap-2">
             <div
               className="flex justify-center items-center xsm:gap-1 lg:gap-5 "

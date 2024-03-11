@@ -55,44 +55,49 @@ const TpBannarSection = () => {
         </div>
       </div>
 
-      <div className="mt-[71px] h-[360px]">
+      <div className="mt-[71px] h-[250px]  rounded-lg">
         <Swiper
-          slidesPerView={1}
-          spaceBetween={5}
-          loop={true}
-         
-          className="mySwiper"
-          onBeforeInit={(swiper)=>{
-            swiperRef.current = swiper;
-          }}
-          breakpoints={{
-            450: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-            768: {
-              slidesPerView:2,
-              spaceBetween: 5,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1350: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1440: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-          }}
+           slidesPerView={1}
+           spaceBetween={0}
+           loop={true}
+           className="mySwiper"
+           onBeforeInit={(swiper) => {
+             swiperRef.current = swiper;
+           }}
+           breakpoints={{
+             450: {
+               slidesPerView: 1,
+               spaceBetween: 0,
+             },
+             640: {
+               slidesPerView: 2,
+               spaceBetween: 5,
+             },
+             768: {
+               slidesPerView: 2,
+               spaceBetween: 5,
+             },
+             1024: {
+               slidesPerView: 2,
+               spaceBetween: 20,
+             },
+             1350: {
+               slidesPerView: 3,
+               spaceBetween: 20,
+             },
+             1440: {
+               slidesPerView: 3,
+               spaceBetween: 20,
+             },
+           }}
           
         >
           {topPakegeImg.map((pakegeImg, index) => (
+
             <SwiperSlide key={index}>
-              <img src={pakegeImg} alt="" />
+              <img src={pakegeImg} alt="" className="h-[250px] rounded-sm w-full object-cover" />
             </SwiperSlide>
+
           ))}
            
         </Swiper>

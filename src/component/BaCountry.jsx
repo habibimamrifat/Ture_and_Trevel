@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "./wrappers/SectionWrapper";
 
 const BaCountry = ({eachBanner}) => {
-  console.log(eachBanner)
+  // console.log(eachBanner)
   return (
     <SectionWrapper>
     <div className="text-white flex justify-between items-center mx-[5%]">
