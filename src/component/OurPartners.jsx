@@ -24,7 +24,7 @@ const OurPartners = () => {
           slidesPerView={1}
           spaceBetween={5}
           loop={true}
-         
+         autoplay={1}
           className="mySwiper "
           breakpoints={{
             450: {

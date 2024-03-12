@@ -9,6 +9,7 @@ import { GiArchiveRegister } from "react-icons/gi";
 import SectionWrapper from "./wrappers/SectionWrapper";
 import { Link } from "react-router-dom";
 
+
 const BaMiniMenu = () => {
   let [setCountry, viewCuntryOption] = useState(false);
   let [destination, setDestination] = useState("BAN");
@@ -23,15 +24,14 @@ const BaMiniMenu = () => {
       viewCuntryOption(false);
     }
   };
-
   useEffect(() => {
     if (setCountry) {
-      console.log("Adding event listener");
+      // console.log("Adding event listener");
       window.addEventListener("click", handleOutsideClick);
     }
 
     return () => {
-      console.log("Removing event listener");
+      // console.log("Removing event listener");
       window.removeEventListener("click", handleOutsideClick);
     };
   }, [setCountry]);
@@ -80,7 +80,7 @@ const BaMiniMenu = () => {
     );
     setDestination((destination = CountryAndFlagSearch.country));
     setFlag((flag = CountryAndFlagSearch.flag));
-
+    // console.log("the selected country and the destinaetion",flag, destination)
     let OptionCountry = countryAndFlagArr.filter(
       (countryandflag) => countryandflag.id != id
     );
@@ -111,10 +111,12 @@ const BaMiniMenu = () => {
     <SectionWrapper>
     <div className=" pt-[5%] flex justify-between items-center ">
       <div className="text-white xsm:font-normal lg:font-bold text-base flex justify-center items-center xsm:pl-[20px] sm:pl-[150px] md:pl-[200px] lg:pl-[315px]">
-        <div className="">
-         <Link> <h1>Support</h1></Link>
+
+        <div className="mr-4 " onClick={()=> alert("this feature is still not functional")}>
+         <Link> <h1 className="text-[20px] font-bold">Support</h1></Link>
         </div>
 
+   {/* curency section starts  */}
         <div className="flex ">
           <select
             name=""
@@ -133,8 +135,10 @@ const BaMiniMenu = () => {
             </option>
           </select>
         </div>
+    {/* curency section ends  */}
 
-        <div className="relative" ref={containerRef}>
+    {/* set country and flag section starts */}
+        <div className="relative" ref={containerRef} >
           <button className="flex justify-center items-center gap-2">
             <div
               className="flex justify-center items-center xsm:gap-1 lg:gap-5 "
@@ -183,7 +187,8 @@ const BaMiniMenu = () => {
           </div>
         </div>
       </div>
-
+    {/* set country and flag section ends */}
+    
       <div className="text-white xsm:font-normal lg:font-bold text-base flex gap-1 xsm:pr-[20px] sm:pr-[150px] md:pr-[200px] lg:pr-[108px]">
 
         <button onClick={() => setSignupPeramiter("Signup")}>

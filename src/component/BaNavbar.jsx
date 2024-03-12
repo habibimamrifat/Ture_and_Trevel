@@ -64,9 +64,14 @@ const BaNavbar = () => {
               </li>
 
               <li>
-                <div className="flex items-center ">
+                <div className="flex items-center relative ">
                   <h1>FEATURES</h1>
                   <FaChevronDown />
+
+                  <div className="absolute bg-white h-10 top-6 w-full">
+
+                  </div>
+
                 </div>
               </li>
 
