@@ -11,10 +11,10 @@ const BaBookNOw = ({next, previous}) => {
 
     <div className="w-[100%] flex justify-center xsm:flex-col sm:flex-row sm:justify-between ml-[2.5%] mr-[2.5%]">
       <div className="text-xl font-bold   text-white gap-2">
-        <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md">
+        <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md" onClick={()=>alert("not functional yet")}>
           Book Now
         </button>
-        <button className="px-[20px] py-[10px] rounded-md">Choose Tour</button>
+        <button className="px-[20px] py-[10px] rounded-md" onClick={()=>alert("not functional yet")} >Choose Tour</button>
       </div>
 
       <div className="flex justify-center items-center gap-6 sm:mr-[50px] xl:mr-[126px] mt-[10px]  ">

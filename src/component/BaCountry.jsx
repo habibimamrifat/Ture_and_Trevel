@@ -1,8 +1,11 @@
 import React from "react";
 import SectionWrapper from "./wrappers/SectionWrapper";
 
-const BaCountry = ({eachBanner}) => {
+const BaCountry = ({eachBanner, index, bannerDaataset, next}) => {
   // console.log(eachBanner)
+  
+  
+ 
   return (
     <SectionWrapper>
     <div className="text-white flex justify-between items-center mx-[5%]">
@@ -26,7 +29,11 @@ const BaCountry = ({eachBanner}) => {
       </div>
 
       <div className="">
-        <h1 className="xsm:text-[30px] xl:font-normal xl:text-[64px]">{eachBanner.  continenlalName}</h1>
+        <h1 className="xsm:text-[30px] xl:font-normal xl:text-[64px]" onClick={next}>
+        {
+          (bannerDaataset[index+1]) ? (bannerDaataset[index+1].countryName) :(bannerDaataset[1].countryName)
+        }
+        </h1>
       </div>
       
     </div>

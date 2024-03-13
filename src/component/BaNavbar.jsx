@@ -1,18 +1,60 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/img/logo-malekairinternational 1 (1).png";
 import { FaChevronDown } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
-import { GiCancel } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { ImCross } from "react-icons/im";
 import SectionWrapper from "./wrappers/SectionWrapper";
 import SideNavigation from "./SideNavigation";
+import Searchfield from "./Searchfield";
 const BaNavbar = () => {
   const [menuButtonClicked, setMenuButtonClicked] = useState(false);
   // console.log(menuButtonClicked);
   const [handleSearchClicked, setHandleSerchClicked] = useState(false);
   // console.log("search", handleSearchClicked);
+ 
+
+  // feature section is in here ...
+  const [feathureSectionOpen, setfeathureSectionOpen]= useState(false);
+  const selectedFeature = useRef(null);
+
+  const handleFeacher =(id)=>{
+    selectedFeature.current=id;
+    // console.log(selectedFeature.current);
+    let alertMessage= selectedFeature.current + " is being selected"
+    alert(alertMessage)
+
+    if(selectedFeature)
+    {
+      setfeathureSectionOpen(!feathureSectionOpen);
+    }
+  }
+
+  // outside button click down here......
+ const featureSectionDiv = useRef(null)
+//  console.log(featureSectionDiv.current);
+const handleOutsideClick =(event)=>{
+if(featureSectionDiv.current && !featureSectionDiv.current.contains(event.target))
+{
+  // console.log("out Side click")
+  setfeathureSectionOpen(!feathureSectionOpen)
+}
+
+}
+
+useEffect(()=>{
+  if(feathureSectionOpen)
+  {
+    window.addEventListener("click", handleOutsideClick)
+  }
+
+  return ()=>
+  {
+    window.removeEventListener("click", handleOutsideClick)
+  }
+})
+ // outside button click up here......
+// feature section is up here ... 
 
   return (
     <SectionWrapper>
@@ -50,12 +92,6 @@ const BaNavbar = () => {
                 : " bg-transparent"
             }`}
           >
-            {/* button to close the nav section  */}
-            {/* <div className={`absolute top-5 right-3 ${menuButtonClicked ? ' block':'hidden'}`}>
-                <GiCancel className='text-xl' onClick={()=>setMenuButtonClicked(!menuButtonClicked)}/>
-              </div> */}
-            {/* button to close the nav section  */}
-
             <ul
               className={`flex md:gap-3 lg:gap-4 xl:gap-6  xsm:hidden sm:flex sm:gap-4`}
             >
@@ -63,17 +99,25 @@ const BaNavbar = () => {
                 <Link to="/">HOME</Link>
               </li>
 
-              <li>
-                <div className="flex items-center relative ">
+              {/* .....the feature of the nav bar ...... */}
+              <li className="relative hover:cursor-pointer" ref={featureSectionDiv}>
+
+                <div className="flex items-center " onClick={()=>setfeathureSectionOpen(!feathureSectionOpen)} >
                   <h1>FEATURES</h1>
-                  <FaChevronDown />
-
-                  <div className="absolute bg-white h-10 top-6 w-full">
-
-                  </div>
-
+                  <FaChevronDown className={`${feathureSectionOpen ? "rotate-180 duration-500":"rotate-0 duration-500"}`} />
                 </div>
+
+                <div className={`absolute bg-white h-auto top-6 text-black w-full flex justify-center rounded-lg translate-max-h ${feathureSectionOpen ? "max-h-44 duration-500 overflow-hidden": "max-h-0 duration-500 overflow-hidden"}`}>
+                    <ul className="mt-2">
+                      <li onClick={()=>handleFeacher("f1")}>Feature - 1</li>
+                      <li onClick={()=>handleFeacher("f2")}>Feature - 2</li>
+                      <li onClick={()=>handleFeacher("f3")}>Feature - 3</li>
+                    </ul>
+                </div>
+
+                
               </li>
+              {/* .....the feature of the nav bar ...... */}
 
               <li>
                 <Link to="/pakagedetails">PAGES</Link>
@@ -96,6 +140,8 @@ const BaNavbar = () => {
         </div>
         {/* all the menu item that appers at the top  */}
 
+
+
         {/* search button on the right  */}
         <div
           className={`w-[20px]  text-white`}
@@ -107,32 +153,16 @@ const BaNavbar = () => {
         </div>
         {/* search button on the right  */}
 
-        {/* ........serch field which appers at the top.......  */}
-        <div
-          className={`fixed  flex justify-around shadow-xl shadow-[#466B85] z-[100] bg-[#344C68] px-5 ${
-            handleSearchClicked
-              ? "top-0 left-0 w-full min-h-[60px]"
-              : "top-[99999px] left-[99999px] w-0 h-0"
-          }`}
-        >
-          <button onClick={() => window.alert("NOT YET FUNCTIONAL")}>
-            <FaSearch className="text-xl text-white" />
-          </button>
 
-          <input
-            type="text"
-            placeholder="Search Here"
-            className="w-[90%] h-full rounded-xl bg-transparent outline-none text-white p-5"
-          />
 
-          <button>
-            <ImCross
-              className="text-lg text-white"
-              onClick={() => setHandleSerchClicked(!handleSearchClicked)}
-            />
-          </button>
-        </div>
         {/* ........serch field which appers at the top.......  */}
+        <Searchfield
+        handleSearchClicked={handleSearchClicked}
+        setHandleSerchClicked={setHandleSerchClicked}
+        />
+        {/* ........serch field which appers at the top.......  */}
+
+        
 
         {/* side nav bar for smaller device  */}
         <SideNavigation

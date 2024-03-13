@@ -47,7 +47,7 @@ const BaSlider = () => {
       countryName: "Arizona",
       aboutCountry:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      continenlalName: "Asia",
+     
       next: next,
       previous: previous,
     },
@@ -57,7 +57,7 @@ const BaSlider = () => {
       countryName: "Africa",
       aboutCountry:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      continenlalName: "Africa",
+    
       next: next,
       previous: previous,
     },
@@ -67,7 +67,7 @@ const BaSlider = () => {
       countryName: "Ice Land",
       aboutCountry:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      continenlalName: "Arab",
+      
       next: next,
       previous: previous,
     },
@@ -98,12 +98,14 @@ const BaSlider = () => {
           className="-ml-3 h-[100vh]"
         >
           {BannerDaataset.map((eachBanner, index) => (
-            <BaSliderCard eachBanner={eachBanner} key={index} />
+         
+            <BaSliderCard eachBanner={eachBanner} key={index} index={index} bannerDaataset={BannerDaataset} next={next} />
           ))}
         </Slider>
 
         <div className=" absolute text-white xl:top-[75%] md:top-[65%] xsm:top-[60%] w-[100%]">
           <SectionWrapper>
+
             <BaBookNOw next={next} previous={previous} />
 
             <div className="w-full mt-[3%] ">
