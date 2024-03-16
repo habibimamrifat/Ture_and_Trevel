@@ -37,7 +37,7 @@ const TopDestination = () => {
   return (
     <SectionWrapper>
       <div className="w-full mt-[81px]">
-        <div className="mx-[5%]">
+        <div className="">
           <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black">
             Top Destinations
           </h1>
@@ -50,10 +50,11 @@ const TopDestination = () => {
               View All Destinations
             </button>
           </div>
-          <div className="flex flex-wrap gap-2 mt-[40px] justify-center items-center w-full">
+          
+          <div className="flex flex-wrap gap-2 mt-[40px] items-center justify-center w-full">
             {topDestinationData.map((topPlacetoVisit, index) => (
               <div
-                className="w-[100%] sm:w-[48%] md:w-[30%] xl:w-[350px] lg:h-[250px] relative rounded-[20px] overflow-hidden"
+                className="w-[100%] sm:w-[48%] md:w-[32%] lg:h-[250px] relative rounded-[20px] overflow-hidden"
                 key={index}
               >
                 <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center m-4 items-center ">

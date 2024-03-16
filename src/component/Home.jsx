@@ -46,13 +46,21 @@ const Home = () => {
   return (
     <div className="overflow-hidden full">
       <Bannar />
+
+      <div className="mx-[5%]">
       <MostPopulerTures />
       <TopDestination />
       <TopStories />
+      </div>
+
       <OurPartners />
+
+      <div className="mx-[5%]">
       <Review />
       <RecentBlogPOst />
       <Newsteller />
+      </div>
+
       <Prefooter />
       <Footer />
 

@@ -34,16 +34,26 @@ html {
   color: #fff !important;
   background: #ff3b00 !important;
 }
+
 .react-datepicker-popper
 {
   z-index: 9999!important;
+ font-size: 5px!important;
+ background-color: blue;
 }
-react-datepicker__month-container
-{
- 
+react-datepicker-wrapper
+
+
+
+.countryselector option{  
+  font-size: 8px;
 }
-.react-datepicker
-{
-  
-  
+@media only screen and (min-width: 425px) {
+  .countryselector option {
+    font-size: 16px;
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
 }

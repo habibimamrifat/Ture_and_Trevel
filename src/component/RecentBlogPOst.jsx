@@ -40,7 +40,7 @@ const RecentBlogPOst = () => {
   ];
   return (
     <SectionWrapper>
-      <div className=" mx-[5%] lg:mb-[80px]">
+      <div className=" lg:mb-[80px]">
 
         <h1 className=" text-black text-[30px] lg:font-medium lg:text-[48px]">
           Recent Blog Posts

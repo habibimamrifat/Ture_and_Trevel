@@ -34,9 +34,9 @@ const TopStories = () => {
   ];
 
   return (
-    <SectionWrapper>
-    <div className="w-full flex justify-center items-center " id="stories">
-      <div className="mt-[80px] mx-[5%] ">
+    
+    <div className="w-full mx-auto max-w-[1440px]" id="stories">
+      <div className="mt-[80px]">
         <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px]">
           <h1 className="xsm:text-[15px] lg:text-[20px] font-normal text-[#645E5E]">
@@ -48,9 +48,9 @@ const TopStories = () => {
           </button>
         </div>
 
-        <div className="flex justify-center flex-wrap mt-[40px] gap-2 sm:gap-2  lg:h-[374px] lg:overflow-hidden w-full">
+        <div className="flex  flex-wrap mt-[40px] gap-2 sm:gap-2  lg:h-[374px] lg:overflow-hidden">
           {topStoriesDataset.map((topStories, index) => (
-            <div className=" xsm:w-full sm:w-[48%] lg:w-[267px] h-[374px]  relative rounded-[20px] overflow-hidden" key={index}>
+            <div className=" xsm:w-full sm:w-[48%] lg:w-[267px] xl:flex-1 h-[374px]  relative rounded-[20px] overflow-hidden" key={index}>
               <div className="absolute top-0 left-0 right-0 bottom-0  rounded-[20px] flex justify-center items-center ">
                <div className="flex flex-col justify-center items-center">
                <div className="h-[100px] w-[100px] rounded-full">
@@ -72,7 +72,7 @@ const TopStories = () => {
       </div>
 
     </div>
-    </SectionWrapper>
+    
   );
 };
 

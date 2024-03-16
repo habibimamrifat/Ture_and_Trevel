@@ -145,32 +145,38 @@ const BabotttomSection = () => {
           {/* Bottom from section starts here  */}
           <form
             onSubmit={(event) => handleHotelBooking(event)}
-            className=" flex justify-center items-center xsm:flex-col xsm:items-center w-full lg:flex-row md:px-2 bg-white xsm:h-auto xsm:mb-10 lg:mb-0 "
+            className=" flex justify-around xsm:flex-col xsm:items-center  lg:flex-row lg:justify-around lg:items-center xsm:mb-[30px] lg:mb-[0px] lg:h-40 mx-[3%] "
           >
-            <div className="text-start w-full  px-[2%]">
+            <div className="text-start w-full lg:ml-[2%]  ">
               <div className="text-xl font-normal text-black flex items-center mb-[14px]">
                 <CiLocationOn />
                 <h1>Going to</h1>
               </div>
 
               <CountryDropdown
-                className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] w-full lg::w-[280px] text-base font-normal ps-[23px] outline-none text-[#948D8D]"
+                className="border-[1px] border-[#948D8D]  rounded-2xl w-full xsm:h-9 md:h-[45px] text-base font-normal ps-[23px] outline-none text-[#948D8D] countryselector"
                 value={country}
                 onChange={(val) => setCountry(val)}
               />
             </div>
 
-            <div className="flex justify-between xsm:flex-col sm:flex-row xsm:gap-1  px-[2%] w-full">
+            <div className="flex lg:mx-[2%] justify-between xsm:flex-col sm:flex-row xsm:gap-1  w-full  ">
+
               <div className="flex flex-1 gap-2">
+
                 <div className="text-start flex-1 gap-2">
+
                   <div className="text-xl font-normal text-black flex items-center mb-[14px]">
                     <LuUserCheck />
                     <h1>Check IN</h1>
                   </div>
 
+                  
+                 
+
                   <DatePicker
-                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal outline-none  text-[#948D8D]  overflow-hidden ps-5"
-                    
+                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal outline-none  text-[#948D8D]  overflow-hidden ps-5 checkIn"
+                    popperPlacement="bottom-end"
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
                     selectsStart
@@ -187,7 +193,8 @@ const BabotttomSection = () => {
                   </div>
 
                   <DatePicker
-                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal outline-none text-[#948D8D]  overflow-hidden ps-5"
+                    className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal outline-none text-[#948D8D]  overflow-hidden ps-5 "
+                    popperPlacement="bottom-start"
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}
                     selectsEnd
@@ -197,6 +204,7 @@ const BabotttomSection = () => {
                     placeholderText="mm/dd/yy"
                   />
                 </div>
+
               </div>
 
               <div className="text-start flex-1">
@@ -225,9 +233,9 @@ const BabotttomSection = () => {
               </div>
             </div>
 
-            <div className="w-full px-[2%]">
+            <div className="w-full flex justify-center lg:mr-[2%]  ">
               <button
-                className="w-full xl:w-[150px] h-[45px] text-white  bg-[#FF3B00] border-[1px] border-gray-400 text-xl font-semibold relative top-5 rounded-2xl"
+                className="w-full h-[45px] text-white  bg-[#FF3B00] border-[1px] border-gray-400 text-xl font-semibold relative top-5 rounded-2xl"
                 type="submit"
               >
                 Search

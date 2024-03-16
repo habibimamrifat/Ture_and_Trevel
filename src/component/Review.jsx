@@ -67,7 +67,7 @@ const Review = () => {
         <h1 className=" text-[48px] font-normal text-black text-center">
           What They’re Saying
         </h1>
-        <div className="mt-[53px] xsm:mx-0 lg:mx-[100px] flex justify-center items-center pb-10 ">
+        <div className="mt-[53px] flex justify-center items-center pb-10 ">
         <Swiper
         pagination={{
           dynamicBullets: true,

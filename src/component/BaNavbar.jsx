@@ -58,9 +58,9 @@ useEffect(()=>{
 
   return (
     <SectionWrapper>
-      <div className="mt-[1%] flex justify-center items-center ">
+      <div className="mt-[1%] flex justify-center items-center mx-[5%] ">
         {/* all the menu item that appers at the top  */}
-        <div className="flex justify-around items-center w-[80%]">
+        <div className="flex justify-around items-center w-full">
           {/* navlink logo section  */}
           <Link to="/">
             <div className="xsm:w-[100px] lg:w-[150px] lg:h-[100px] sm:w-[15px] xl:w-[211px] xl:h-[146px] lg:ml-1 xsm:hidden lg:block">
