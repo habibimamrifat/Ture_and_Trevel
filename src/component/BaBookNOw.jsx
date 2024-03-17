@@ -13,7 +13,7 @@ const BaBookNOw = ({next, previous}) => {
 
       <div className="text-xl font-bold   text-white gap-2">
         <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md" onClick={()=>alert("not functional yet")}>
-          Book Now
+          Book ow
         </button>
         <button className="px-[20px] py-[10px] rounded-md" onClick={()=>alert("not functional yet")} >
           Choose Tour
