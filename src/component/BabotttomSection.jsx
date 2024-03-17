@@ -29,7 +29,8 @@ const BabotttomSection = () => {
   const [country, setCountry] = useState("Bangladesh");
 
   // date manegment state is maneged here
-  const [startDate, setStartDate] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
+  
   const [endDate, setEndDate] = useState("");
   // new Date("mm/dd/yy")
   // new Date("mm/dd/yy")

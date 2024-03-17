@@ -9,6 +9,7 @@ const MptCard = ({ aboutTure,  }) => {
   return (
     <SectionWrapper>
     <div className="xsm:w-full h-full rounded-2xl relative 2xl:w-[48%]">
+
       <img src={aboutTure.img} alt="" className="bg-cover bg-center object-cover w-full" />
 
       <div className="absolute top-0 bottom-0 left-0 right-0 rounded-2xl flex flex-col justify-between m-[2%]">
@@ -23,7 +24,7 @@ const MptCard = ({ aboutTure,  }) => {
           </div>
         </div>
 
-        <div className="py-4">
+        <div className="flex justify-between flex-col">
 
         <div className="w-full xsm:m-[1%] xl:h-[78px] xl:mx-[2%]">
             <h1 className="text-wrap xsm:text-[20px] xl:text-[32px] font-normal text-white px-4">
@@ -53,9 +54,11 @@ const MptCard = ({ aboutTure,  }) => {
           </div>
 
         </div>
+
         </div>
 
       </div>
+
     </div>
     </SectionWrapper>
   );

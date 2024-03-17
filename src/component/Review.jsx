@@ -7,15 +7,13 @@ import Rating from "./Rating";
 import  { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SectionWrapper from "./wrappers/SectionWrapper";
 
-
-// import required modules
-import { Pagination } from 'swiper/modules';
 
 const Review = () => {
   const reviewDataSet = [
@@ -73,12 +71,16 @@ const Review = () => {
           dynamicBullets: true,
           clickable:true, 
         }}
-        modules={[Pagination]}
         loop={true}
         className="mySwiper"
         slidesPerView={1}
         spaceBetween={5}
-        
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: true,
+        }}
         
         breakpoints={{
           450: {

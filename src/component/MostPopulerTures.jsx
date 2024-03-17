@@ -61,19 +61,20 @@ const MostPopulerTures = () => {
   ];
   return (
     <SectionWrapper>
-      <div className="w-full xsm:mt-[450px] sm:mt-[300px] md:mt-[380px] lg:mt-[350px] xl:mt-[250px]">
+      <div className="w-full xsm:mt-[475px] sm:mt-[300px] md:mt-[380px] lg:mt-[350px] xl:mt-[250px]">
+
         <div>
           <div>
             <h1 className=" xsm:text-[30px] md:text-5xl font-medium text-black">
               Most Popular Tours
             </h1>
           </div>
-          <div className="flex xsm:flex-col  md:flex-row md:justify-between items-center md:gap-16">
+          <div className="flex  md:flex-row md:justify-between items-center md:gap-16">
             <h6 className="xsm:text-[20px] md:text-xl font-normal text-[#645E5E]">
               Lorem Ipsum is simply dummy text.
             </h6>
 
-            <div className="flex xsm:flex-col md:flex-row md:justify-center md:items-center sxm:gap-4 md:gap-16 xsm:mt-3 md:mt-[10px]">
+            <div className=" xsm:hidden md:flex md:flex-row md:justify-center md:items-center md:gap-16 xsm:mt-3 md:mt-[10px]">
               <h1 className="xsm:text-[20px] md:text-xl font-normal text-[#645E5E]">
                 View All Tours
               </h1>
@@ -145,7 +146,28 @@ const MostPopulerTures = () => {
           </Swiper>
         </div>
 
-        {/* above this  */}
+        <div className="flex flex-col justify-center xsm:mt-[20px]  md:hidden">
+
+              <h1 className="xsm:text-[20px] md:text-xl font-normal text-[#645E5E] text-center">
+                View All Tours
+              </h1>
+
+              <div className=" flex justify-center items-center gap-2 mt-[10px]">
+                <button
+                  className="w-[42px] h-[41px] rounded-full bg-[#645E5E]/30 flex justify-center items-center text-white "
+                  onClick={() => swiperRef.current?.slidePrev()}
+                >
+                  <FaArrowLeft />
+                </button>
+
+                <button
+                  className="w-[42px] h-[41px] rounded-full bg-[#645E5E]/30 flex justify-center items-center text-white "
+                  onClick={() => swiperRef.current?.slideNext()}
+                >
+                  <FaArrowRight />
+                </button>
+              </div>
+            </div>
       </div>
     </SectionWrapper>
   );

@@ -26,7 +26,7 @@ html {
   line-height: 20px !important;
   font-size: 12px !important;
   color: black !important;
-  background:white !important;
+  background-color: brown !important;
   opacity: 100% !important;
 }
 
@@ -41,13 +41,11 @@ html {
  font-size: 5px!important;
  background-color: blue;
 }
-react-datepicker-wrapper
-
-
 
 .countryselector option{  
-  font-size: 8px;
+  font-size: 12px;
 }
+
 @media only screen and (min-width: 425px) {
   .countryselector option {
     font-size: 16px;
@@ -56,4 +54,22 @@ react-datepicker-wrapper
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
+}
+.react-datepicker__header
+{
+  background-color: #ff3b00!important;
+  
+}
+.react-datepicker__day-name{
+  color: white!important;
+}
+.react-datepicker__current-month{
+  color: white!important;
+}
+.react-datepicker__day--selected
+{
+  background-color:#ff3b00!important;
+}
+.react-datepicker__day--in-selecting-range{
+  background-color:#ff3b00!important; 
 }

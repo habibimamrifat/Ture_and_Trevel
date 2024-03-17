@@ -9,15 +9,18 @@ const BaBookNOw = ({next, previous}) => {
   return (
     <SectionWrapper>
 
-    <div className="w-[100%] flex justify-center xsm:flex-col sm:flex-row sm:justify-between mx-[5%]">
+    <div className="max-w-[100%] flex justify-center xsm:flex-col sm:flex-row sm:justify-between mx-[5%]">
+
       <div className="text-xl font-bold   text-white gap-2">
         <button className="px-[20px] py-[10px] bg-[#FF3B00] rounded-md" onClick={()=>alert("not functional yet")}>
           Book Now
         </button>
-        <button className="px-[20px] py-[10px] rounded-md" onClick={()=>alert("not functional yet")} >Choose Tour</button>
+        <button className="px-[20px] py-[10px] rounded-md" onClick={()=>alert("not functional yet")} >
+          Choose Tour
+        </button>
       </div>
 
-      <div className="flex justify-center items-center gap-6 sm:mr-[50px] xl:mr-[126px] mt-[10px]  ">
+      <div className="flex justify-center items-center gap-6  mt-[10px]  ">
 
         <button onClick={previous}>
         <div
@@ -37,6 +40,7 @@ const BaBookNOw = ({next, previous}) => {
         </button>
 
       </div>
+
     </div>
 
     </SectionWrapper>

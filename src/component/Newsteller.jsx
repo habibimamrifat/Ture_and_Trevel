@@ -7,7 +7,7 @@ import SectionWrapper from './wrappers/SectionWrapper';
 const Newsteller = () => {
   return (
     <SectionWrapper>
-    <div className='w-full'>
+    <div className='w-full mt-[50px]'>
       <div className='flex justify-center text-white w-full'>
       <div className='px-4 py-4 rounded-2xl  flex items-center justify-around xsm:flex-col sm:flex-row xsm:h-auto sm:h-[200px] md:h-[300px] w-[90%] bg-no-repeat bg-center ' style={{backgroundImage:`url(${background})`}}>
 

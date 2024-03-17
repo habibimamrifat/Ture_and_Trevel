@@ -21,7 +21,7 @@ const FooterBottom = () => {
 
   return (
     <SectionWrapper>
-      <div className='w-[80%] h-[154px] mt-[23px] flex justify-around absolute bottom-0 right-0 rounded-ss-2xl overflow-hidden '>
+      <div className='w-[60%] h-[154px] mt-[23px] flex justify-around absolute bottom-0 right-0 rounded-ss-2xl overflow-hidden '>
             <div className='w-[161px] h-full bg-[#FF3B00] flex justify-center items-center'>
                 <FaArrowDown className='text-3xl text-white font-normal'/>
             </div>

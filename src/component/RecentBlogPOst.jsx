@@ -40,7 +40,7 @@ const RecentBlogPOst = () => {
   ];
   return (
     <SectionWrapper>
-      <div className=" lg:mb-[80px]">
+      <div className=" lg:mb-[80px] w-full ">
 
         <h1 className=" text-black text-[30px] lg:font-medium lg:text-[48px]">
           Recent Blog Posts
@@ -49,10 +49,10 @@ const RecentBlogPOst = () => {
           Latin literature from 45 BC, making it over 2000 years old
         </h1>
 
-        <div className="mt-[41px]  gap-3 flex justify-center items-center xsm:flex-col xsm:items-center xsm:justify-center sm:flex-wrap sm:flex-row sm:justify-start lg:flex lg:flex-wrap ">
+        <div className="mt-[41px] w-full gap-3 flex justify-center items-center xsm:flex-col xsm:items-center xsm:justify-center sm:flex-wrap sm:flex-row sm:justify-start  lg:flex lg:justify-center lg:flex-wrap ">
 
           {recentBlogPostDataset.map((blogPost,index) => (
-            <div className="xsm:w-full sm:w-[48%] lg:w-[30%] xl:w-[382px]" key={index}>
+            <div className="xsm:w-full sm:w-[48%] lg:w-[32%] xl:w-flex-1 mt-[20px]" key={index}>
               
               <div className=" w-full h-[252px] rounded-lg overflow-hidden">
 

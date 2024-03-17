@@ -1,31 +1,38 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Opimg from "../assets/img/Opimg.png"
 import imageS from "../assets/img/Simg.png"
 import imageT from "../assets/img/Timg.png"
 import imageU from "../assets/img/Uimg.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import SectionWrapper from './wrappers/SectionWrapper'
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
+
 const OurPartners = () => {
+ 
   const OurpartnarDataSet= [
     Opimg,imageS,imageT,imageU,Opimg,imageS,imageT,imageU,
   ]
   return (
     
     <div className='w-full h-auto xsm:h-[150px] md:h-[200px] lg:h-[280px] bg-[#D9D9D9] mt-[81px]  flex justify-center items-center'>
-      <div className='max-w-[90%] flex items-center justify-center'>
-  
+      <div className='w-full flex items-center justify-center'>
       <Swiper
           slidesPerView={1}
           spaceBetween={5}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
           loop={true}
-         autoplay={1}
           className="mySwiper "
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             450: {
               slidesPerView: 1,
@@ -48,6 +55,9 @@ const OurPartners = () => {
               spaceBetween: 10,
             },
           }}
+
+          
+        
           
         >
           {OurpartnarDataSet.map((ourpartnar, index) => (
@@ -59,6 +69,7 @@ const OurPartners = () => {
           ))}
            
         </Swiper>
+
       </div>
     </div>
     

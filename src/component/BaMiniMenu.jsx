@@ -102,7 +102,7 @@ const BaMiniMenu = () => {
 
   return (
     <SectionWrapper>
-      <div className=" pt-[5%] flex justify-between items-center mx-[5%]">
+      <div className=" pt-[3%] flex justify-between items-center xsm:mx-[5%] lg:mx-[20%]">
 
         <div className="text-white xsm:font-normal lg:font-bold text-base flex justify-center items-center ">
           <div
@@ -190,7 +190,7 @@ const BaMiniMenu = () => {
         </div>
         {/* set country and flag section ends */}
 
-        <div className="text-white xsm:font-normal lg:font-bold text-base flex gap-1 xsm:pr-[20px] sm:pr-[150px] md:pr-[200px] lg:pr-[108px]">
+        <div className="text-white xsm:font-normal lg:font-bold text-base flex gap-1 xsm:pr-[20px]">
           <button onClick={() => setSignupPeramiter("Signup")}>
             <h1 className="xsm:hidden md:block">Sign Up</h1>
             <GiArchiveRegister className="xsm:block md:hidden" />
