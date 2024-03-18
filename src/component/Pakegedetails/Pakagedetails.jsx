@@ -51,7 +51,7 @@ const Pakagedetails = () => {
         <SectionWrapper>
       <div className="w-full md:grid md:grid-cols-12 gap-4">
 
-        <div className="xl:ml-[37px] md:col-span-9">
+        <div className="mx-[5%] md:col-span-9">
         <OverView/>
         <TopPakegeInclucated/>
         <Location/>
@@ -59,7 +59,7 @@ const Pakagedetails = () => {
         <PakageReview />
         </div>
 
-        <div className="md:col-span-3 mt-[15px] xl:mr-[30px]">
+        <div className="md:col-span-3 mt-[15px] mx-[5%]">
           <SideNavBar/>
         </div>
 

@@ -94,8 +94,8 @@ const Accordian = () => {
             </div>
             <div className="mt-[45px] w-full flex xsm:flex-wrap lg:flex-nowrap justify-around items-center">
               {
-                accordian.imges.map((accordianImg)=>(
-                  <img src={accordianImg} alt="" srcset="" className="w-[260px]" />
+                accordian.imges.map((accordianImg, index)=>(
+                  <img src={accordianImg} key={index} alt="" className="w-[260px]" />
                 ))
               }
 

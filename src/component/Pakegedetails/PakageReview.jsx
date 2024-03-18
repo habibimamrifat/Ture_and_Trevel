@@ -1,19 +1,47 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import person from "../../assets/img/Ellipse 56.png";
 import Ratting from "../Rating";
 const PakageReview = () => {
-  return (
-    <div className="xsm:ml-[10px] xsm:mr-[10px] xsm:mt-[45px] xsm:mb-[70px] md:mt-[60px] md:mb-[95px]" id='reviews'>
+  const name=useRef("")
+  const email=useRef("")
+  const comment=useRef("")
+  const handleFromDataChange=(event)=>{
+    const form = event.target;
+    if(event.target.name=== "name")
+    {
+      name.current=event.target.value
+    }
+    if(event.target.name=== "email")
+    {
+      email.current=event.target.value
+    }
+    if(event.target.name=== "comment")
+    {
+      comment.current=event.target.value
+    }
+    
+  }
 
+  const manageSubmitReview =(event)=>{
+    console.log("submitting")
+    event.preventDefault();
+    const message=name.current+" "+email.current+" "+comment.current
+    alert(message)
+  }
+  return (
+    <div
+      className="xsm:mt-[45px] xsm:mb-[70px] md:mt-[60px] md:mb-[95px]"
+      id="reviews"
+    >
       <div>
         <div className="flex gap-5 items-center">
-
           <div className="xsm:w-[30px] xsm:h-[30px] lg:w-[55px] lg:h-[55px] rounded-full bg-[#FF3B00] text-white flex items-center justify-center">
             <h1 className="xsm:text-[15px] md:text-[32px] font-normal">4</h1>
           </div>
 
-          <h1 className="xsm:text-[30px] xsm:font-normal md:text-[50px] xl:text-[60px] font-semibold text-black">Reviews 1</h1>
-
+          <h1 className="xsm:text-[30px] xsm:font-normal md:text-[50px] xl:text-[60px] font-semibold text-black">
+            Reviews 1
+          </h1>
         </div>
         <div className="xsm:mt-[30px] lg:mt-[65px] bg-[#EBE7E7] w-full h-auto rounded-xl">
           <div className="xsm:text-[15px] lg:text-[20px] font-normal m-2 xsm:p-[20px] lg:p-[35px]">
@@ -29,9 +57,7 @@ const PakageReview = () => {
       </div>
 
       <div className="mt-[36px] flex xsm:flex-col xsm:gap-[15px] md:flex-row md:justify-between">
-
         <div className="flex items-center gap-3">
-
           <div className="xsm:w-[30px] xsm:h-[30px] lg:w-[56px] lg:h-[56px] rounded-full items-center justify-center">
             <img src={person} alt="" className="object-cover h-full w-full" />
           </div>
@@ -65,26 +91,51 @@ const PakageReview = () => {
             </div>
           </div>
 
-          <div className="flex xsm:flex-col xsm:gap-3 lg:flex-row lg:justify-between mt-[42px]">
-            <input type="text" placeholder="Your Name"  className="bg-white p-5 rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
-            <input type="text" placeholder="Your Email"  className="bg-white p-5 rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"/>
-            
-          </div>
+          <form action="" onSubmit={manageSubmitReview}>
+            <div className="flex xsm:flex-col xsm:gap-3 lg:flex-row lg:justify-between mt-[42px]">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="bg-white p-5 outline-none rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"
+                name="name"
+                onChange={handleFromDataChange}
+              />
+              <input
+                name="email"
+                type="text"
+                placeholder="Your Email"
+                className="bg-white p-5 outline-none rounded-md xsm:w-full lg:w-[45%] h-[64px] text-[#BDB0B0] text-[20px] font-normal"
+                onChange={handleFromDataChange}
+              />
+            </div>
 
-          <div className="mt-[28px]">
-            <textarea name="" placeholder="Comment" id="" cols="30" rows="10" className="bg-white p-5 rounded-md w-full h-[208px] text-[#BDB0B0] text-[20px] font-normal" ></textarea>
-          </div>
+            <div className="mt-[28px]">
+              <textarea
+                name="comment"
+                placeholder="Comment"
+                id=""
+                cols="30"
+                rows="10"
+                className="bg-white p-5 outline-none rounded-md w-full h-[208px] text-[#BDB0B0] text-[20px] font-normal"
+                onChange={handleFromDataChange}
+              ></textarea>
+            </div>
 
-          <div className="flex justify-between items-center mt-[28px]">
-            <button className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#2E2E2F] text-white xsm:text-[15px] lg:text-[20px] font-normal">
-            + Add a new file
-            </button>
-            <button className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#FF3B00] text-white xsm:text-[15px] lg:text-[20px] font-normal">
-            Send
-            </button>
-          </div>
+            <div className="flex justify-between items-center mt-[28px]">
+              <label
+                for="file-upload"
+                className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#2E2E2F] text-white xsm:text-[15px] lg:text-[20px] font-normal  flex justify-center items-center"
+              >
+                <input type="file" id="file-upload" className="hidden" />+ Add a new
+                file
+              </label>
+
+              <button type="submit" className="xsm:w-[45%] xsm:h-[40px] lg:w-[230px] lg:h-[62px] rounded-[10px] bg-[#FF3B00] text-white xsm:text-[15px] lg:text-[20px] font-normal">
+                Send
+              </button>
+            </div>
+          </form>
         </div>
-
       </div>
     </div>
   );

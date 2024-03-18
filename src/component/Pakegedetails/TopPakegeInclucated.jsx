@@ -4,7 +4,7 @@ const TopPakegeInclucated = () => {
   return (
     
       <div id="Included">
-        <h1 className=" xsm:text-[30px] xsm:ml-[20px] xsm:mr-[20px] lg:text-[48px] font-medium text-black mb-[35px]">
+        <h1 className=" xsm:text-[30px] lg:text-[48px] font-medium text-black mb-[35px]">
           Included
         </h1>
 

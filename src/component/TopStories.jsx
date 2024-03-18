@@ -35,7 +35,7 @@ const TopStories = () => {
 
   return (
     
-    <div className="w-full mx-auto max-w-[1440px]" id="stories">
+    <div className="w-full mx-auto max-w-[1440px] " id="stories">
       <div className="mt-[80px]">
         <h1 className="xsm:text-[30px] lg:text-[48px] font-medium text-black">Top Stories</h1>
         <div className="flex xsm:flex-col md:flex-row md:justify-between mt[10px]">
