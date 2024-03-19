@@ -166,15 +166,10 @@ const BabotttomSection = () => {
               <div className="flex flex-1 gap-2">
 
                 <div className="text-start flex-1 gap-2">
-
                   <div className="text-xl font-normal text-black flex items-center mb-[14px]">
                     <LuUserCheck />
                     <h1>Check IN</h1>
                   </div>
-
-                  
-                 
-
                   <DatePicker
                     className="border-[1px] border-[#948D8D]  rounded-2xl xsm:w-full xsm:h-9 md:h-[45px] lg:w-[150px] text-base font-normal outline-none  text-[#948D8D]  overflow-hidden ps-5 checkIn"
                     popperPlacement="bottom-end"

@@ -58,7 +58,7 @@ useEffect(()=>{
 
   return (
     <SectionWrapper>
-      <div className="mt-[1%] flex justify-center items-center mx-[5%] ">
+      <div className="xsm:mt-[3%] lg:mt-[1%] flex justify-center items-center mx-[5%] ">
         {/* all the menu item that appers at the top  */}
         <div className="flex justify-around items-center w-full">
           {/* navlink logo section  */}
