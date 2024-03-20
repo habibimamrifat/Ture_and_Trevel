@@ -7,7 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 const TpBannaeBottomSEction = () => {
   const [AdultCount, setAdultCount] = useState(1);
   const [childCount, setchildCount] = useState(0);
-  const [days, setdays] = useState();
+  const [days, setDays] = useState(5);
+  const [totalDoller, setTotalDoller]= useState(500)
 
   const [startDate, setStartDate] = useState(new Date());
   const Startdate = startDate.getDate();
@@ -21,32 +22,35 @@ const TpBannaeBottomSEction = () => {
   const EndMonth = endDate.toLocaleString("default", { month: "long" });
   const EndYear = endDate.getFullYear();
 
- 
+  const totalExpances =(days, adult, child)=>
+  {
+  const eachDayAdult = 100;
+  const eachDayChild =75;
+  console.log("The calcluter days",days,"child",childCount,"adult",AdultCount)
+  setTotalDoller((eachDayAdult*adult*days)+(eachDayChild*child*days))
+  }
+
 
   useEffect(() => {
     const daysAfterFiveDays = new Date(startDate);
     daysAfterFiveDays.setDate(startDate.getDate() + 5);
-    setEndDate(new Date(daysAfterFiveDays));
-  }, [startDate]);
+    setEndDate(daysAfterFiveDays);
+    setDays(Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)));
+  }, [startDate, endDate]);
 
+ 
   useEffect(() => {
-    const time = startDate.getTime()
-    const time1 = endDate.getTime()
-    
-    const DaysInMili =(time1 - time)
-    setdays((DaysInMili/(1000 * 60 * 60 * 24)));
-    
-
-  }, [endDate]);
-
-
+    totalExpances(days, AdultCount, childCount);
+  }, [days, AdultCount, childCount]);
 
   const manupulateAdultcount = (AddOrMin) => {
     if (AddOrMin === "plus") {
       setAdultCount(AdultCount + 1);
+      totalExpances(days,AdultCount,childCount)
     } else {
       if (AdultCount > 1) {
         setAdultCount(AdultCount - 1);
+        totalExpances(days,AdultCount,childCount)
       } else {
         alert("atlist one Adult is requared");
       }
@@ -56,11 +60,14 @@ const TpBannaeBottomSEction = () => {
   const manupulateChildcount = (AddOrMin) => {
     if (AddOrMin === "plus") {
       setchildCount(childCount + 1);
+      totalExpances(days,AdultCount,childCount)
     } else {
       if (childCount > 0) {
         setchildCount(childCount - 1);
+        totalExpances(days,AdultCount,childCount)
       } else {
         alert("child count is 0");
+        totalExpances(days,AdultCount,childCount)
       }
     }
   };
@@ -164,7 +171,7 @@ const TpBannaeBottomSEction = () => {
         </div>
         <div className="w-full  h-[211px] flex flex-col justify-center items-center xsm:col-span-12 flex-1 lg:col-span-12 md:col-span-6 sm:col-span-12">
           <h1>
-          {days} Days <span className="font-bold text-[24px]">| from $500</span>
+          {days} Days <span className="font-bold text-[24px]">| {totalDoller}</span>
           </h1>
           <button className="py-[10px] px-[38px] bg-[#FF3B00] rounded-md mt-[21px]">
             Book Now

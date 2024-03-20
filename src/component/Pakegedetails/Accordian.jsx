@@ -54,20 +54,23 @@ const Accordian = () => {
             className=" flex justify-between items-center"
             onClick={() => setTheAccordianToOpen(accordian.id)}
           >
-           <div className="flex items-center gap-3">
-            <div className="flex justify-center items-center h-[47px] w-[47px] rounded-full ">
-                <img
-                  src={accordian.titleImg}
-                  alt=""
-                  className="object-cover h-[100%] w-[100%]"
-                />
-              </div>
-              <h1 className="font-medium text-[25px]">{accordian.imgsideWriting}</h1>
-           </div>
+           <div className="flex flex-1">
 
-            <div className="font-medium text-[25px]">
-              <h1>{accordian.titleWriting}</h1>
-            </div>
+                <div className="flex items-center w-[175px] border-white border-2 gap-3">
+                  <div className="flex justify-center items-center h-[47px] w-[47px] rounded-full ">
+                      <img
+                        src={accordian.titleImg}
+                        alt=""
+                        className="object-cover h-[100%] w-[100%]"
+                      />
+                    </div>
+                    <h1 className="font-medium xsm:text-[16px] lg:text-[25px]">{accordian.imgsideWriting}</h1>
+                </div>
+
+                <div className="font-medium xsm:text-[16px] lg:text-[25px] mx-auto">
+                  <h1>{accordian.titleWriting}</h1>
+                </div>
+           </div>
 
             <div>
               {isAccordianClosed === accordian.id ? (
