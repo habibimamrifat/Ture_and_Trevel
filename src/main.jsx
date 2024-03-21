@@ -15,7 +15,7 @@ import Profile from './component/DashBoard/Profile';
 import Booking from './component/DashBoard/Booking';
 import Cards from './component/DashBoard/Cards';
 import WishList from './component/DashBoard/WishList';
-;
+import Comment from './component/Pakegedetails/Comment';
 
 
 const router = createBrowserRouter([
@@ -25,7 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/pakagedetails",
-    element:<Pakagedetails/>
+    element:<Pakagedetails/>,
+  },
+  {
+    path:"/comments/:index",
+    element:<Comment/>
   },
   {
     path: "/country_destination",

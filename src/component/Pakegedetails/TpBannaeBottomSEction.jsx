@@ -30,15 +30,19 @@ const TpBannaeBottomSEction = () => {
   setTotalDoller((eachDayAdult*adult*days)+(eachDayChild*child*days))
   }
 
+  useEffect(() => {
+    setEndDate(endDate);
+    setDays(Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)));
+  }, [endDate]);
 
   useEffect(() => {
     const daysAfterFiveDays = new Date(startDate);
     daysAfterFiveDays.setDate(startDate.getDate() + 5);
     setEndDate(daysAfterFiveDays);
     setDays(Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)));
-  }, [startDate, endDate]);
+  }, [startDate]);
 
- 
+
   useEffect(() => {
     totalExpances(days, AdultCount, childCount);
   }, [days, AdultCount, childCount]);
@@ -171,7 +175,7 @@ const TpBannaeBottomSEction = () => {
         </div>
         <div className="w-full  h-[211px] flex flex-col justify-center items-center xsm:col-span-12 flex-1 lg:col-span-12 md:col-span-6 sm:col-span-12">
           <h1>
-          {days} Days <span className="font-bold text-[24px]">| {totalDoller}</span>
+          {days} Days <span className="font-bold text-[24px]">| From {totalDoller}</span>
           </h1>
           <button className="py-[10px] px-[38px] bg-[#FF3B00] rounded-md mt-[21px]">
             Book Now
