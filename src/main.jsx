@@ -16,6 +16,7 @@ import Booking from './component/DashBoard/Booking';
 import Cards from './component/DashBoard/Cards';
 import WishList from './component/DashBoard/WishList';
 import Comment from './component/Pakegedetails/Comment';
+import RightsideStylebar from './component/practice/RightsideStylebar';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/country_destination",
     element:<CountryDestination/>
+  },
+  {
+    path: "/rightsidebar",
+    element:<RightsideStylebar/>
   },
   {
     path: "/dashboard",

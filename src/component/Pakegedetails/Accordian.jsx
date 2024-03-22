@@ -48,7 +48,7 @@ const Accordian = () => {
 
   return (
     <div className="mb-[58px]">
-      {accordianDataset.map((accordian, index) => (
+      {accordianDataset.map((accordian) => (
         <div className="mt-[15px]" key={accordian.id}>
           <div
             className=" flex justify-between items-center"
@@ -56,7 +56,7 @@ const Accordian = () => {
           >
            <div className="flex flex-1">
 
-                <div className="flex items-center w-[175px] border-white border-2 gap-3">
+                <div className="flex items-center w-[175px] gap-3">
                   <div className="flex justify-center items-center h-[47px] w-[47px] rounded-full ">
                       <img
                         src={accordian.titleImg}
